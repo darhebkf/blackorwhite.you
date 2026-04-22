@@ -2,7 +2,12 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ResultCard } from "@/components/result/ResultCard";
-import { themeFor } from "@/lib/color";
+import {
+  clearShadeCookie,
+  reflectShade,
+  resetShade,
+  setShadeCookie,
+} from "@/lib/browser";
 import type { Jurisdiction } from "@/lib/jurisdictions";
 import { type Answer, computeShade, type Question, score } from "@/lib/scoring";
 import { ProgressMark } from "./ProgressMark";
@@ -40,17 +45,9 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
   }, [done, questions, answerList, jurisdiction]);
 
   useEffect(() => {
-    const root = document.documentElement;
-    const theme = themeFor(runningShade);
-    root.style.setProperty("--bg", theme.bg);
-    root.style.setProperty("--fg", theme.fg);
-    root.style.setProperty("--rule", theme.rule);
-    root.style.setProperty("--shade", String(runningShade));
+    reflectShade(runningShade);
     return () => {
-      root.style.removeProperty("--bg");
-      root.style.removeProperty("--fg");
-      root.style.removeProperty("--rule");
-      root.style.removeProperty("--shade");
+      resetShade();
     };
   }, [runningShade]);
 
@@ -58,6 +55,10 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
     () => (done ? score(questions, answerList, jurisdiction) : null),
     [done, questions, answerList, jurisdiction],
   );
+
+  useEffect(() => {
+    if (result) setShadeCookie(result.shade);
+  }, [result]);
 
   const handleSelect = (optionIndex: number) => {
     const q = questions[step];
@@ -72,6 +73,7 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
   };
 
   const handleRetake = () => {
+    clearShadeCookie();
     setState({ step: 0, answers: {} });
   };
 

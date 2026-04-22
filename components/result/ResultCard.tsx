@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { generateFaviconBlob } from "@/lib/browser";
 import type { QuizResult } from "@/lib/scoring";
 import { AXES } from "@/lib/scoring";
 
@@ -6,6 +7,19 @@ type ResultCardProps = {
   result: QuizResult;
   onRetake: () => void;
 };
+
+async function downloadIcon(shade: number, archetypeId: string): Promise<void> {
+  const blob = await generateFaviconBlob(shade);
+  if (!blob) return;
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `blackorwhite-${String(shade).padStart(3, "0")}-${archetypeId}.png`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
 
 export function ResultCard({ result, onRetake }: ResultCardProps) {
   const { shade, axes, band, archetype, colorCodes } = result;
@@ -64,6 +78,13 @@ export function ResultCard({ result, onRetake }: ResultCardProps) {
               className="hairline invert-on-hover px-6 py-3 eyebrow"
             >
               ↻ Retake
+            </button>
+            <button
+              type="button"
+              onClick={() => downloadIcon(shade, archetype.id)}
+              className="hairline invert-on-hover px-6 py-3 eyebrow"
+            >
+              ↓ Download icon
             </button>
             <Link
               href="/"
