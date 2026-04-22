@@ -1,36 +1,32 @@
-import Link from "next/link";
-import { generateFaviconBlob } from "@/lib/browser";
+import type { ReactNode } from "react";
 import type { QuizResult } from "@/lib/scoring";
 import { AXES } from "@/lib/scoring";
 
 type ResultCardProps = {
   result: QuizResult;
-  onRetake: () => void;
+  actions: ReactNode;
+  section: string;
+  originLabel?: string;
 };
 
-async function downloadIcon(shade: number, archetypeId: string): Promise<void> {
-  const blob = await generateFaviconBlob(shade);
-  if (!blob) return;
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = `blackorwhite-${String(shade).padStart(3, "0")}-${archetypeId}.png`;
-  document.body.appendChild(a);
-  a.click();
-  a.remove();
-  URL.revokeObjectURL(url);
-}
-
-export function ResultCard({ result, onRetake }: ResultCardProps) {
+export function ResultCard({
+  result,
+  actions,
+  section,
+  originLabel,
+}: ResultCardProps) {
   const { shade, axes, band, archetype, colorCodes } = result;
+  const countLabel =
+    result.total > 0
+      ? `${result.answered} / ${result.total} answered`
+      : undefined;
+  const topRight = originLabel ?? countLabel;
 
   return (
     <section className="flex flex-col">
       <div className="px-[var(--gutter)] pt-10 pb-6 hairline-bot flex items-center justify-between">
-        <span className="eyebrow">§ 004 · Result</span>
-        <span className="eyebrow mono-nums">
-          {result.answered} / {result.total} answered
-        </span>
+        <span className="eyebrow">{section}</span>
+        {topRight && <span className="eyebrow mono-nums">{topRight}</span>}
       </div>
 
       <div className="grid grid-cols-12 gap-[var(--gutter)] px-[var(--gutter)] py-[clamp(3rem,6vw,6rem)]">
@@ -71,34 +67,7 @@ export function ResultCard({ result, onRetake }: ResultCardProps) {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={onRetake}
-              className="hairline invert-on-hover px-6 py-3 eyebrow"
-            >
-              ↻ Retake
-            </button>
-            <button
-              type="button"
-              onClick={() => downloadIcon(shade, archetype.id)}
-              className="hairline invert-on-hover px-6 py-3 eyebrow"
-            >
-              ↓ Download icon
-            </button>
-            <Link
-              href="/"
-              className="hairline invert-on-hover px-6 py-3 eyebrow"
-            >
-              ← Landing
-            </Link>
-            <Link
-              href="/methodology"
-              className="hairline invert-on-hover px-6 py-3 eyebrow"
-            >
-              → Methodology
-            </Link>
-          </div>
+          {actions}
         </div>
 
         <aside className="col-span-12 lg:col-span-5 flex flex-col gap-10">

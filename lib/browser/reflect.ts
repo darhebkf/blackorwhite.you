@@ -1,4 +1,5 @@
 import { shadeToHex, themeFor } from "@/lib/color";
+import { readShadeFromCookies } from "./cookie";
 import { generateFaviconDataUrl } from "./favicon";
 
 const DYNAMIC_ICON_ATTR = "data-bow-dynamic";
@@ -58,4 +59,14 @@ export function resetShade(): void {
   root.style.removeProperty("--shade");
   setMetaThemeColor("#ffffff");
   removeDynamicFavicon();
+}
+
+export async function reflectFromCookie(): Promise<void> {
+  if (typeof document === "undefined") return;
+  const shade = await readShadeFromCookies();
+  if (shade === 100) {
+    resetShade();
+    return;
+  }
+  reflectShade(shade);
 }

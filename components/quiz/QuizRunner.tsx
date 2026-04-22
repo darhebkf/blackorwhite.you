@@ -1,11 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { OwnerActions } from "@/components/result/OwnerActions";
 import { ResultCard } from "@/components/result/ResultCard";
 import {
   clearShadeCookie,
+  reflectFromCookie,
   reflectShade,
-  resetShade,
   setShadeCookie,
 } from "@/lib/browser";
 import type { Jurisdiction } from "@/lib/jurisdictions";
@@ -46,10 +47,13 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
 
   useEffect(() => {
     reflectShade(runningShade);
-    return () => {
-      resetShade();
-    };
   }, [runningShade]);
+
+  useEffect(() => {
+    return () => {
+      void reflectFromCookie();
+    };
+  }, []);
 
   const result = useMemo(
     () => (done ? score(questions, answerList, jurisdiction) : null),
@@ -78,7 +82,13 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
   };
 
   if (done && result) {
-    return <ResultCard result={result} onRetake={handleRetake} />;
+    return (
+      <ResultCard
+        result={result}
+        section="§ 004 · Result"
+        actions={<OwnerActions result={result} onRetake={handleRetake} />}
+      />
+    );
   }
 
   const q = questions[step];

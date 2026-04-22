@@ -1,11 +1,11 @@
 import { cookies } from "next/headers";
 import { ImageResponse } from "next/og";
-import { SHADE_COOKIE } from "@/lib/browser/cookie";
+import { SHADE_COOKIE, VIEW_COOKIE } from "@/lib/browser/cookie";
 import { shadeToHex } from "@/lib/color";
 
 export async function shadeFromCookie(): Promise<number> {
   const store = await cookies();
-  const raw = store.get(SHADE_COOKIE)?.value;
+  const raw = store.get(VIEW_COOKIE)?.value ?? store.get(SHADE_COOKIE)?.value;
   const parsed = raw ? Number.parseFloat(raw) : 100;
   if (!Number.isFinite(parsed)) return 100;
   return Math.max(0, Math.min(100, Math.round(parsed)));

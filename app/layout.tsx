@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Libre_Baskerville } from "next/font/google";
 import localFont from "next/font/local";
+import { cookies } from "next/headers";
+import { SHADE_COOKIE, VIEW_COOKIE } from "@/lib/browser/cookie";
+import { shadeToHex, themeFor } from "@/lib/color";
 import "./globals.css";
 
 const display = localFont({
@@ -33,6 +36,15 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+async function readShadeServer(): Promise<number> {
+  const store = await cookies();
+  const raw =
+    store.get(VIEW_COOKIE)?.value ?? store.get(SHADE_COOKIE)?.value ?? "100";
+  const parsed = Number.parseFloat(raw);
+  if (!Number.isFinite(parsed)) return 100;
+  return Math.max(0, Math.min(100, Math.round(parsed)));
+}
+
 export const metadata: Metadata = {
   title: "BLACK or WHITE — how gray are you.",
   description:
@@ -58,21 +70,34 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#ffffff",
-};
+export async function generateViewport(): Promise<Viewport> {
+  const shade = await readShadeServer();
+  return {
+    width: "device-width",
+    initialScale: 1,
+    themeColor: shadeToHex(shade),
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const shade = await readShadeServer();
+  const theme = themeFor(shade);
   return (
     <html
       lang="en"
       className={`${display.variable} ${serif.variable} ${mono.variable}`}
+      style={
+        {
+          "--bg": theme.bg,
+          "--fg": theme.fg,
+          "--rule": theme.rule,
+          "--shade": String(shade),
+        } as React.CSSProperties
+      }
     >
       <body className="grain">{children}</body>
     </html>
