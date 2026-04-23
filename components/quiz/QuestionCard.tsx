@@ -53,7 +53,7 @@ export function QuestionCard({
               <button
                 type="button"
                 onClick={() => onSelect(i)}
-                className="group w-full text-left grid grid-cols-[auto_1fr_auto] items-baseline gap-x-6 px-[var(--gutter)] py-6 invert-on-hover"
+                className="group w-full text-left grid grid-cols-[auto_1fr_auto] items-baseline gap-x-6 px-[var(--gutter)] py-6 invert-on-hover cursor-pointer"
                 style={
                   isSelected
                     ? { background: "var(--fg)", color: "var(--bg)" }
@@ -90,9 +90,14 @@ export function QuestionCard({
           <button
             type="button"
             onClick={onBack}
-            className="eyebrow underline underline-offset-4"
+            className="eyebrow group relative inline-block pb-[2px] cursor-pointer"
+            style={{ textDecoration: "none" }}
           >
-            ← Back
+            ← Previous question
+            <span
+              aria-hidden
+              className="pointer-events-none absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300 group-hover:w-0 group-focus-visible:w-0"
+            />
           </button>
         </div>
       )}

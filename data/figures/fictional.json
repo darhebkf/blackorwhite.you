@@ -1,0 +1,314 @@
+[
+  {
+    "id": "omni-man",
+    "name": "Omni-Man · Nolan Grayson",
+    "kind": "fictional",
+    "shade": 3,
+    "work": "Invincible",
+    "rationale": "Slaughters the Guardians of the Globe in the first episode. Viltrumite conquest is the plan; earth is the warm-up."
+  },
+  {
+    "id": "yujiro-hanma",
+    "name": "Yujiro Hanma",
+    "kind": "fictional",
+    "shade": 5,
+    "work": "Baki the Grappler",
+    "rationale": "Kills bears and tigers barehanded, defeated the US military in Vietnam personally, treats the planet like a sparring partner."
+  },
+  {
+    "id": "hannibal-lecter",
+    "name": "Hannibal Lecter",
+    "kind": "fictional",
+    "shade": 6,
+    "work": "Silence of the Lambs",
+    "rationale": "Cultured cannibal; serial killer with a palette."
+  },
+  {
+    "id": "anton-chigurh",
+    "name": "Anton Chigurh",
+    "kind": "fictional",
+    "shade": 7,
+    "work": "No Country for Old Men",
+    "rationale": "Contract killer who flips coins for your life."
+  },
+  {
+    "id": "alex-delarge",
+    "name": "Alex DeLarge",
+    "kind": "fictional",
+    "shade": 8,
+    "work": "A Clockwork Orange",
+    "rationale": "Beatings, rapes, home invasions — all with a Beethoven soundtrack."
+  },
+  {
+    "id": "tony-soprano",
+    "name": "Tony Soprano",
+    "kind": "fictional",
+    "shade": 9,
+    "work": "The Sopranos",
+    "rationale": "Mob boss; murder, extortion, beatings, relentless self-justification."
+  },
+  {
+    "id": "walter-white",
+    "name": "Walter White",
+    "kind": "fictional",
+    "shade": 10,
+    "work": "Breaking Bad",
+    "rationale": "Cooks industrial meth, orders murders, ruins his family on the way down."
+  },
+  {
+    "id": "tony-montana",
+    "name": "Tony Montana",
+    "kind": "fictional",
+    "shade": 10,
+    "work": "Scarface",
+    "rationale": "Cartel empire, violence, cocaine-mountain coda."
+  },
+  {
+    "id": "norman-bates",
+    "name": "Norman Bates",
+    "kind": "fictional",
+    "shade": 11,
+    "work": "Psycho",
+    "rationale": "Taxidermy, matricide, motel murder. Classic."
+  },
+  {
+    "id": "frank-underwood",
+    "name": "Frank Underwood",
+    "kind": "fictional",
+    "shade": 6,
+    "work": "House of Cards",
+    "rationale": "Murders rivals, corrupts the presidency, breaks the fourth wall about it."
+  },
+  {
+    "id": "michael-corleone",
+    "name": "Michael Corleone",
+    "kind": "fictional",
+    "shade": 12,
+    "work": "The Godfather",
+    "rationale": "War hero turned Don; orders the Five Families wiped out."
+  },
+  {
+    "id": "the-joker",
+    "name": "The Joker",
+    "kind": "fictional",
+    "shade": 12,
+    "work": "DC Comics · The Dark Knight",
+    "rationale": "Chaos for its own sake; mass murder as a punchline."
+  },
+  {
+    "id": "dexter-morgan",
+    "name": "Dexter Morgan",
+    "kind": "fictional",
+    "shade": 14,
+    "work": "Dexter",
+    "rationale": "Serial killer with a code. Still a serial killer."
+  },
+  {
+    "id": "light-yagami",
+    "name": "Light Yagami",
+    "kind": "fictional",
+    "shade": 18,
+    "work": "Death Note",
+    "rationale": "Uses the Death Note to execute criminals worldwide. Self-appointed god of the new world."
+  },
+  {
+    "id": "eren-yeager",
+    "name": "Eren Yeager",
+    "kind": "fictional",
+    "shade": 18,
+    "work": "Attack on Titan",
+    "rationale": "Initiates the Rumbling — genocide framed as existential self-defence."
+  },
+  {
+    "id": "tyler-durden",
+    "name": "Tyler Durden",
+    "kind": "fictional",
+    "shade": 20,
+    "work": "Fight Club",
+    "rationale": "Anti-consumerist cell, arson, mass property destruction — all fun."
+  },
+  {
+    "id": "the-punisher",
+    "name": "Frank Castle · The Punisher",
+    "kind": "fictional",
+    "shade": 20,
+    "work": "Marvel Comics",
+    "rationale": "Vigilante; executes criminals without trial. Self-assigned jurisdiction."
+  },
+  {
+    "id": "travis-bickle",
+    "name": "Travis Bickle",
+    "kind": "fictional",
+    "shade": 22,
+    "work": "Taxi Driver",
+    "rationale": "God's lonely man; mass shooting as rescue mission."
+  },
+  {
+    "id": "biscuit-oliva",
+    "name": "Biscuit Oliva · Mr. Unchained",
+    "kind": "fictional",
+    "shade": 22,
+    "work": "Baki the Grappler",
+    "rationale": "US federal prison's 'warden' who keeps prisoners he enjoys fighting."
+  },
+  {
+    "id": "annalise-keating",
+    "name": "Annalise Keating",
+    "kind": "fictional",
+    "shade": 25,
+    "work": "How to Get Away with Murder",
+    "rationale": "Defence lawyer who teaches, participates in, and covers up killings."
+  },
+  {
+    "id": "gordon-gekko",
+    "name": "Gordon Gekko",
+    "kind": "fictional",
+    "shade": 26,
+    "work": "Wall Street",
+    "rationale": "Insider trading, market manipulation, 'greed is good' as ethos."
+  },
+  {
+    "id": "jesse-pinkman",
+    "name": "Jesse Pinkman",
+    "kind": "fictional",
+    "shade": 28,
+    "work": "Breaking Bad",
+    "rationale": "Dealer, cook, occasional killer; drifts rather than decides."
+  },
+  {
+    "id": "lelouch-lamperouge",
+    "name": "Lelouch vi Britannia",
+    "kind": "fictional",
+    "shade": 30,
+    "work": "Code Geass",
+    "rationale": "Leads a rebellion, mass-manipulates, kills an emperor — then a self-martyr ending."
+  },
+  {
+    "id": "omar-little",
+    "name": "Omar Little",
+    "kind": "fictional",
+    "shade": 30,
+    "work": "The Wire",
+    "rationale": "Robs drug dealers at gunpoint, has a code, Baltimore folk hero."
+  },
+  {
+    "id": "lisbeth-salander",
+    "name": "Lisbeth Salander",
+    "kind": "fictional",
+    "shade": 32,
+    "work": "Millennium trilogy",
+    "rationale": "Hacks, defrauds, retaliates with force against documented abusers."
+  },
+  {
+    "id": "robin-hood",
+    "name": "Robin Hood",
+    "kind": "fictional",
+    "shade": 38,
+    "work": "English folklore",
+    "rationale": "Armed robbery, explicit redistribution politics, outlaw by choice."
+  },
+  {
+    "id": "katniss-everdeen",
+    "name": "Katniss Everdeen",
+    "kind": "fictional",
+    "shade": 48,
+    "work": "The Hunger Games",
+    "rationale": "Kills to survive, becomes the face of a revolt she didn't plan."
+  },
+  {
+    "id": "batman",
+    "name": "Bruce Wayne · Batman",
+    "kind": "fictional",
+    "shade": 52,
+    "work": "DC Comics",
+    "rationale": "Vigilantism, trespass, assault, but refuses to kill. Strict rules, elastic legality."
+  },
+  {
+    "id": "don-draper",
+    "name": "Don Draper",
+    "kind": "fictional",
+    "shade": 55,
+    "work": "Mad Men",
+    "rationale": "Serial infidelity, identity fraud since Korea, chronic lying without joy."
+  },
+  {
+    "id": "mark-grayson",
+    "name": "Mark Grayson · Invincible",
+    "kind": "fictional",
+    "shade": 58,
+    "work": "Invincible",
+    "rationale": "Heroic intent; lethal in practice, collateral damage is an ongoing problem."
+  },
+  {
+    "id": "jean-valjean",
+    "name": "Jean Valjean",
+    "kind": "fictional",
+    "shade": 60,
+    "work": "Les Misérables",
+    "rationale": "Stole bread, broke parole; spent the rest of his life becoming a saint about it."
+  },
+  {
+    "id": "ferris-bueller",
+    "name": "Ferris Bueller",
+    "kind": "fictional",
+    "shade": 68,
+    "work": "Ferris Bueller's Day Off",
+    "rationale": "Truancy, forgery, charming municipal chaos, zero body count."
+  },
+  {
+    "id": "don-quixote",
+    "name": "Don Quixote",
+    "kind": "fictional",
+    "shade": 72,
+    "work": "Don Quixote",
+    "rationale": "Delusional and well-meaning; the small damage is incidental."
+  },
+  {
+    "id": "michael-scott",
+    "name": "Michael Scott",
+    "kind": "fictional",
+    "shade": 75,
+    "work": "The Office",
+    "rationale": "Casual offence and small lies by the dozen, but nothing malicious."
+  },
+  {
+    "id": "hermione-granger",
+    "name": "Hermione Granger",
+    "kind": "fictional",
+    "shade": 82,
+    "work": "Harry Potter",
+    "rationale": "Rule-follower who bends rules for justice, under protest, with footnotes."
+  },
+  {
+    "id": "atticus-finch",
+    "name": "Atticus Finch",
+    "kind": "fictional",
+    "shade": 90,
+    "work": "To Kill a Mockingbird",
+    "rationale": "Defends the unpopular, declines corruption, pays for it. Near-archetype of integrity."
+  },
+  {
+    "id": "samwise-gamgee",
+    "name": "Samwise Gamgee",
+    "kind": "fictional",
+    "shade": 92,
+    "work": "The Lord of the Rings",
+    "rationale": "Loyal, brave, kind, zero wrongdoing — even the Ring couldn't keep its grip."
+  },
+  {
+    "id": "leslie-knope",
+    "name": "Leslie Knope",
+    "kind": "fictional",
+    "shade": 94,
+    "work": "Parks and Recreation",
+    "rationale": "Earnest civic service, follows every rule, makes binders for her rules."
+  },
+  {
+    "id": "paddington-bear",
+    "name": "Paddington Bear",
+    "kind": "fictional",
+    "shade": 96,
+    "work": "Paddington",
+    "rationale": "Aggressively polite, makes everyone around him better. Has not committed a crime."
+  }
+]

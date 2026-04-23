@@ -9,14 +9,18 @@ import {
   reflectShade,
   setShadeCookie,
 } from "@/lib/browser";
-import type { Jurisdiction } from "@/lib/jurisdictions";
+import type { Figure } from "@/lib/figures";
+import type { JurisdictionDescriptor } from "@/lib/jurisdictions";
 import { type Answer, computeShade, type Question, score } from "@/lib/scoring";
 import { ProgressMark } from "./ProgressMark";
 import { QuestionCard } from "./QuestionCard";
 
 type QuizRunnerProps = {
   questions: readonly Question[];
-  jurisdiction: Jurisdiction;
+  jurisdiction: JurisdictionDescriptor;
+  figures: readonly Figure[];
+  authored: number;
+  target: number;
 };
 
 type State = {
@@ -31,7 +35,13 @@ function toAnswerList(answers: Record<string, number>): Answer[] {
   }));
 }
 
-export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
+export function QuizRunner({
+  questions,
+  jurisdiction,
+  figures,
+  authored,
+  target,
+}: QuizRunnerProps) {
   const [{ step, answers }, setState] = useState<State>({
     step: 0,
     answers: {},
@@ -40,10 +50,10 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
   const answerList = useMemo(() => toAnswerList(answers), [answers]);
   const done = step >= questions.length;
 
-  const runningShade = useMemo(() => {
-    if (done) return computeShade(questions, answerList, jurisdiction);
-    return computeShade(questions, answerList, jurisdiction);
-  }, [done, questions, answerList, jurisdiction]);
+  const runningShade = useMemo(
+    () => computeShade(questions, answerList, jurisdiction.id),
+    [questions, answerList, jurisdiction.id],
+  );
 
   useEffect(() => {
     reflectShade(runningShade);
@@ -56,8 +66,8 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
   }, []);
 
   const result = useMemo(
-    () => (done ? score(questions, answerList, jurisdiction) : null),
-    [done, questions, answerList, jurisdiction],
+    () => (done ? score(questions, answerList, jurisdiction.id) : null),
+    [done, questions, answerList, jurisdiction.id],
   );
 
   useEffect(() => {
@@ -86,6 +96,8 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
       <ResultCard
         result={result}
         section="§ 004 · Result"
+        figures={figures}
+        jurisdictionAdjective={jurisdiction.adjective}
         actions={<OwnerActions result={result} onRetake={handleRetake} />}
       />
     );
@@ -96,7 +108,13 @@ export function QuizRunner({ questions, jurisdiction }: QuizRunnerProps) {
 
   return (
     <section className="flex flex-col">
-      <ProgressMark index={step} total={questions.length} />
+      <ProgressMark
+        index={step}
+        total={questions.length}
+        shade={runningShade}
+        authored={authored}
+        target={target}
+      />
       <QuestionCard
         question={q}
         selected={selected}

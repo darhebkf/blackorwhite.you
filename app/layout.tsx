@@ -48,7 +48,7 @@ async function readShadeServer(): Promise<number> {
 export const metadata: Metadata = {
   title: "BLACK or WHITE — how gray are you.",
   description:
-    "Everyone operates in the gray area. Tax workarounds, weed, speeding, white lies, civil disobedience, piracy — all of it. Twenty-four questions from Dutch criminal law and international treaties measure exactly how much of the gray you live in, and hand you back a shade, a color code, and a place on the spectrum. Nothing leaves your device.",
+    "Everyone operates in the gray area. Tax workarounds, weed, speeding, white lies, civil disobedience, piracy — all of it. Twenty-four questions from criminal law and international treaties measure exactly how much of the gray you live in, and hand you back a shade, a color code, and a place on the spectrum. Nothing leaves your device.",
   applicationName: "blackorwhite.you",
   keywords: [
     "gray area",
@@ -65,8 +65,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "BLACK or WHITE — how gray are you.",
     description:
-      "Everyone operates in the gray area. Twenty-four questions measure exactly how much.",
+      "Everyone operates in the gray area. Answer and receive your shade.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BLACK or WHITE — how gray are you.",
+    description:
+      "Everyone operates in the gray area. Answer and receive your shade.",
   },
 };
 

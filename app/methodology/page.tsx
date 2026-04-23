@@ -3,8 +3,11 @@ import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SwipeLink } from "@/components/ui/SwipeLink";
 import { SHADE_BANDS, shadeToHex } from "@/lib/color";
-import { NL_QUESTIONS } from "@/lib/questions";
+import { FIGURES } from "@/lib/figures/server";
+import { questionsFor } from "@/lib/questions";
 import { ARCHETYPES, type Archetype, AXES, type Question } from "@/lib/scoring";
+
+const NL_QUESTIONS = questionsFor("nl", "classic");
 
 function dominantAxesFor(archetype: Archetype): string {
   return AXES.map((axis) => ({
@@ -90,7 +93,8 @@ export default function MethodologyPage() {
           <SwipeLink href="#bands">c · Bands</SwipeLink>
           <SwipeLink href="#archetypes">d · Archetypes</SwipeLink>
           <SwipeLink href="#questions">e · Questions</SwipeLink>
-          <SwipeLink href="#disclaimers">f · Disclaimers</SwipeLink>
+          <SwipeLink href="#figures">f · Figures</SwipeLink>
+          <SwipeLink href="#disclaimers">g · Disclaimers</SwipeLink>
         </nav>
       </section>
 
@@ -398,12 +402,120 @@ export default function MethodologyPage() {
       </section>
 
       <section
+        id="figures"
+        className="px-[var(--gutter)] py-[clamp(3rem,6vw,6rem)] hairline-bot"
+      >
+        <div className="grid grid-cols-12 gap-[var(--gutter)] mb-10">
+          <div className="col-span-12 md:col-span-4">
+            <p className="eyebrow mb-4">§ 003·f</p>
+            <h2
+              className="font-black tracking-tight"
+              style={{ fontSize: "var(--step-4)", lineHeight: 0.95 }}
+            >
+              The figures
+            </h2>
+          </div>
+          <div className="col-span-12 md:col-span-8 max-w-[64ch]">
+            <p style={{ fontSize: "var(--step-1)", lineHeight: 1.45 }}>
+              Figures you can compare your shade against. Fictional characters
+              are estimated opinion; real people appear only with public-record
+              citations.
+            </p>
+            <p className="eyebrow mt-4" style={{ opacity: 0.7 }}>
+              {FIGURES.filter((f) => f.kind === "fictional").length} fictional ·{" "}
+              {FIGURES.filter((f) => f.kind === "real").length} real
+            </p>
+          </div>
+        </div>
+
+        {(["fictional", "real"] as const).map((kind) => {
+          const list = [...FIGURES]
+            .filter((f) => f.kind === kind)
+            .sort((a, b) => a.shade - b.shade);
+          return (
+            <div key={kind} className="mb-12 last:mb-0">
+              <div className="flex items-baseline justify-between mb-4 hairline-bot pb-2">
+                <span className="eyebrow" style={{ fontSize: "var(--step-0)" }}>
+                  {kind === "fictional"
+                    ? "fictional"
+                    : "real · public record only"}
+                </span>
+                <span className="eyebrow mono-nums" style={{ opacity: 0.6 }}>
+                  {String(list.length).padStart(2, "0")}
+                </span>
+              </div>
+              <ul className="flex flex-col">
+                {list.map((figure) => (
+                  <li
+                    key={figure.id}
+                    className="grid grid-cols-[3rem_1fr] gap-x-5 py-4 hairline-bot last:border-b-0"
+                  >
+                    <span
+                      className="mono-nums font-black"
+                      style={{ fontSize: "var(--step-2)", lineHeight: 1 }}
+                    >
+                      {String(figure.shade).padStart(2, "0")}
+                    </span>
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-baseline gap-3 flex-wrap">
+                        <span
+                          className="font-bold tracking-tight"
+                          style={{ fontSize: "var(--step-1)" }}
+                        >
+                          {figure.name}
+                        </span>
+                        {figure.work && (
+                          <span className="eyebrow" style={{ opacity: 0.55 }}>
+                            {figure.work}
+                          </span>
+                        )}
+                      </div>
+                      <p
+                        className="italic-accent"
+                        style={{
+                          fontSize: "var(--step-0)",
+                          lineHeight: 1.45,
+                        }}
+                      >
+                        {figure.rationale}
+                      </p>
+                      {figure.citation && (
+                        <p className="eyebrow mt-1" style={{ opacity: 0.7 }}>
+                          {figure.citationUrl ? (
+                            <a
+                              href={figure.citationUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group relative inline-block pb-[1px]"
+                              style={{ textDecoration: "none" }}
+                            >
+                              ↗ {figure.citation}
+                              <span
+                                aria-hidden
+                                className="pointer-events-none absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300 group-hover:w-0 group-focus-visible:w-0"
+                              />
+                            </a>
+                          ) : (
+                            figure.citation
+                          )}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </section>
+
+      <section
         id="disclaimers"
         className="px-[var(--gutter)] py-[clamp(3rem,6vw,6rem)] hairline-bot"
       >
         <div className="grid grid-cols-12 gap-[var(--gutter)]">
           <div className="col-span-12 md:col-span-4">
-            <p className="eyebrow mb-4">§ 003·f</p>
+            <p className="eyebrow mb-4">§ 003·g</p>
             <h2
               className="font-black tracking-tight"
               style={{ fontSize: "var(--step-4)", lineHeight: 0.95 }}

@@ -1,0 +1,461 @@
+[
+  {
+    "id": "ted-bundy",
+    "name": "Ted Bundy",
+    "kind": "real",
+    "shade": 2,
+    "rationale": "Confessed to 30 murders; likely many more. Executed 1989.",
+    "citation": "Florida v. Bundy (1979, 1980) · d. 1989",
+    "citationUrl": "https://en.wikipedia.org/wiki/Ted_Bundy"
+  },
+  {
+    "id": "pablo-escobar",
+    "name": "Pablo Escobar",
+    "kind": "real",
+    "shade": 3,
+    "rationale": "Narco-terrorism, thousands of documented killings, bombings.",
+    "citation": "Public conviction record · killed 1993",
+    "citationUrl": "https://en.wikipedia.org/wiki/Pablo_Escobar"
+  },
+  {
+    "id": "charles-manson",
+    "name": "Charles Manson",
+    "kind": "real",
+    "shade": 4,
+    "rationale": "Orchestrated the Tate-LaBianca murders through the 'Family'.",
+    "citation": "California v. Manson (1971) · d. 2017",
+    "citationUrl": "https://en.wikipedia.org/wiki/Charles_Manson"
+  },
+  {
+    "id": "al-capone",
+    "name": "Al Capone",
+    "kind": "real",
+    "shade": 5,
+    "rationale": "Organised crime, St. Valentine's Day Massacre, ultimately jailed for tax evasion.",
+    "citation": "US v. Capone (1931) · 11y federal sentence",
+    "citationUrl": "https://en.wikipedia.org/wiki/Al_Capone"
+  },
+  {
+    "id": "jeffrey-epstein",
+    "name": "Jeffrey Epstein",
+    "kind": "real",
+    "shade": 5,
+    "rationale": "Convicted 2008 for procurement of a minor; federal sex-trafficking charges pending at his 2019 death.",
+    "citation": "US v. Epstein (2008) · federal indictment (2019)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Jeffrey_Epstein"
+  },
+  {
+    "id": "ghislaine-maxwell",
+    "name": "Ghislaine Maxwell",
+    "kind": "real",
+    "shade": 7,
+    "rationale": "Convicted of sex trafficking minors for Epstein's network.",
+    "citation": "US v. Maxwell (2021) · 20y sentence",
+    "citationUrl": "https://en.wikipedia.org/wiki/Ghislaine_Maxwell"
+  },
+  {
+    "id": "john-gotti",
+    "name": "John Gotti",
+    "kind": "real",
+    "shade": 7,
+    "rationale": "Gambino crime family boss; RICO conviction including murder charges.",
+    "citation": "US v. Gotti (1992) · d. 2002",
+    "citationUrl": "https://en.wikipedia.org/wiki/John_Gotti"
+  },
+  {
+    "id": "vladimir-putin",
+    "name": "Vladimir Putin",
+    "kind": "real",
+    "shade": 8,
+    "rationale": "ICC arrest warrant for alleged unlawful deportation of children from occupied Ukraine.",
+    "citation": "ICC arrest warrant (March 2023)",
+    "citationUrl": "https://en.wikipedia.org/wiki/International_Criminal_Court_arrest_warrants_for_Vladimir_Putin_and_Maria_Lvova-Belova"
+  },
+  {
+    "id": "bernie-madoff",
+    "name": "Bernie Madoff",
+    "kind": "real",
+    "shade": 9,
+    "rationale": "Ran the largest Ponzi scheme in history, roughly $65B nominal.",
+    "citation": "US v. Madoff (2009) · 150y · d. 2021",
+    "citationUrl": "https://en.wikipedia.org/wiki/Bernie_Madoff"
+  },
+  {
+    "id": "harvey-weinstein",
+    "name": "Harvey Weinstein",
+    "kind": "real",
+    "shade": 9,
+    "rationale": "Convicted of rape and sexual assault in multiple jurisdictions.",
+    "citation": "New York (2020, 2024 retrial) · California (2022) · UK indicted",
+    "citationUrl": "https://en.wikipedia.org/wiki/Harvey_Weinstein"
+  },
+  {
+    "id": "willem-holleeder",
+    "name": "Willem Holleeder",
+    "kind": "real",
+    "shade": 10,
+    "rationale": "Notorious Dutch organised-crime figure. Multiple convictions including complicity in several contract killings.",
+    "citation": "Rechtbank Amsterdam (2019) · life sentence",
+    "citationUrl": "https://en.wikipedia.org/wiki/Willem_Holleeder"
+  },
+  {
+    "id": "joran-van-der-sloot",
+    "name": "Joran van der Sloot",
+    "kind": "real",
+    "shade": 12,
+    "rationale": "Dutch; convicted in Peru for the 2010 killing of Stephany Flores. Separately pleaded guilty in US for extortion.",
+    "citation": "Peru conviction (2012) · 28y · US plea (2023)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Joran_van_der_Sloot"
+  },
+  {
+    "id": "ross-ulbricht",
+    "name": "Ross Ulbricht",
+    "kind": "real",
+    "shade": 15,
+    "rationale": "Founded and ran Silk Road; convicted of drug distribution, money laundering, conspiracy.",
+    "citation": "US v. Ulbricht (2015) · life · commuted 2025",
+    "citationUrl": "https://en.wikipedia.org/wiki/Ross_Ulbricht"
+  },
+  {
+    "id": "sam-bankman-fried",
+    "name": "Sam Bankman-Fried",
+    "kind": "real",
+    "shade": 18,
+    "rationale": "Convicted of fraud, conspiracy, and money laundering in the FTX collapse.",
+    "citation": "US v. Bankman-Fried (2023) · 25y",
+    "citationUrl": "https://en.wikipedia.org/wiki/Sam_Bankman-Fried"
+  },
+  {
+    "id": "silvio-berlusconi",
+    "name": "Silvio Berlusconi",
+    "kind": "real",
+    "shade": 20,
+    "rationale": "Italian PM four times; convicted in 2013 of tax fraud; multiple other trials and conflicts of interest.",
+    "citation": "Cassazione (2013) · d. 2023",
+    "citationUrl": "https://en.wikipedia.org/wiki/Silvio_Berlusconi"
+  },
+  {
+    "id": "oj-simpson",
+    "name": "O.J. Simpson",
+    "kind": "real",
+    "shade": 22,
+    "rationale": "Acquitted criminally for the 1994 killings; civilly liable for wrongful death; later convicted of armed robbery (2008).",
+    "citation": "California v. Simpson (1995) · civil (1997) · Nevada (2008) · d. 2024",
+    "citationUrl": "https://en.wikipedia.org/wiki/O._J._Simpson"
+  },
+  {
+    "id": "donald-trump",
+    "name": "Donald Trump",
+    "kind": "real",
+    "shade": 22,
+    "rationale": "Convicted on 34 felony counts of falsifying business records. Civil findings of fraud and sexual abuse. First US president with felony convictions.",
+    "citation": "People v. Trump (NY, May 2024) · Carroll civil verdicts · NY civil fraud judgment",
+    "citationUrl": "https://en.wikipedia.org/wiki/Criminal_trials_of_Donald_Trump"
+  },
+  {
+    "id": "elizabeth-holmes",
+    "name": "Elizabeth Holmes",
+    "kind": "real",
+    "shade": 24,
+    "rationale": "Theranos founder; convicted of defrauding investors.",
+    "citation": "US v. Holmes (2022) · ~11y",
+    "citationUrl": "https://en.wikipedia.org/wiki/Elizabeth_Holmes"
+  },
+  {
+    "id": "lance-armstrong",
+    "name": "Lance Armstrong",
+    "kind": "real",
+    "shade": 26,
+    "rationale": "Admitted to systematic doping after years of denial; stripped of all seven Tour de France titles.",
+    "citation": "USADA report (2012) · Oprah interview (2013) · civil whistleblower settlement (2018)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Lance_Armstrong"
+  },
+  {
+    "id": "richard-nixon",
+    "name": "Richard Nixon",
+    "kind": "real",
+    "shade": 28,
+    "rationale": "Watergate cover-up; resigned the presidency under threat of impeachment.",
+    "citation": "House Judiciary articles (1974) · d. 1994",
+    "citationUrl": "https://en.wikipedia.org/wiki/Watergate_scandal"
+  },
+  {
+    "id": "benjamin-netanyahu",
+    "name": "Benjamin Netanyahu",
+    "kind": "real",
+    "shade": 28,
+    "rationale": "Long-serving Israeli PM; under indictment on bribery, fraud, and breach of trust charges. Separately, an ICC arrest warrant issued over alleged war crimes in Gaza.",
+    "citation": "Tel Aviv District Court indictment (2019, trial ongoing) · ICC arrest warrant (Nov 2024)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Trial_of_Benjamin_Netanyahu"
+  },
+  {
+    "id": "julius-caesar",
+    "name": "Julius Caesar",
+    "kind": "real",
+    "shade": 32,
+    "rationale": "Crossed the Rubicon under arms — textbook illegal insurrection in Roman law.",
+    "citation": "Plutarch · Suetonius · 49 BC",
+    "citationUrl": "https://en.wikipedia.org/wiki/Crossing_the_Rubicon"
+  },
+  {
+    "id": "michael-jackson",
+    "name": "Michael Jackson",
+    "kind": "real",
+    "shade": 32,
+    "rationale": "Acquitted on all counts in the 2005 child-molestation trial; substantial civil settlement in an earlier 1993 allegation. Complicated public record.",
+    "citation": "California v. Jackson (2005 · acquitted) · 1993 civil settlement · d. 2009",
+    "citationUrl": "https://en.wikipedia.org/wiki/Trial_of_Michael_Jackson"
+  },
+  {
+    "id": "mata-hari",
+    "name": "Mata Hari",
+    "kind": "real",
+    "shade": 35,
+    "rationale": "Dutch-born exotic dancer and courtesan; convicted by a French court-martial of spying for Germany in WWI and executed.",
+    "citation": "French military court (1917) · executed 1917",
+    "citationUrl": "https://en.wikipedia.org/wiki/Mata_Hari"
+  },
+  {
+    "id": "hunter-biden",
+    "name": "Hunter Biden",
+    "kind": "real",
+    "shade": 36,
+    "rationale": "Convicted on federal firearms charges; pleaded guilty to federal tax charges.",
+    "citation": "US v. Biden (DE 2024, CA 2024)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Hunter_Biden"
+  },
+  {
+    "id": "martha-stewart",
+    "name": "Martha Stewart",
+    "kind": "real",
+    "shade": 38,
+    "rationale": "Convicted of conspiracy, obstruction, and false statements related to an ImClone stock sale. Served five months.",
+    "citation": "US v. Stewart (2004)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Martha_Stewart"
+  },
+  {
+    "id": "geert-wilders",
+    "name": "Geert Wilders",
+    "kind": "real",
+    "shade": 38,
+    "rationale": "Dutch politician; convicted of inciting discrimination over the 2014 'fewer Moroccans' chant. No fine imposed.",
+    "citation": "Gerechtshof Den Haag (2020 appeal)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Geert_Wilders"
+  },
+  {
+    "id": "edward-snowden",
+    "name": "Edward Snowden",
+    "kind": "real",
+    "shade": 40,
+    "rationale": "Leaked classified NSA surveillance programs; self-disclosed. Principled or criminal is the whole argument.",
+    "citation": "Charged under US Espionage Act (2013) · in exile",
+    "citationUrl": "https://en.wikipedia.org/wiki/Edward_Snowden"
+  },
+  {
+    "id": "keith-richards",
+    "name": "Keith Richards",
+    "kind": "real",
+    "shade": 42,
+    "rationale": "Decades of openly admitted heavy drug use; multiple drug arrests; no convictions serious enough to keep a Stone down.",
+    "citation": "UK & Canadian drug arrests (1967, 1977) · autobiography 'Life' (2010)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Keith_Richards"
+  },
+  {
+    "id": "snoop-dogg",
+    "name": "Snoop Dogg",
+    "kind": "real",
+    "shade": 44,
+    "rationale": "Rap career alongside open cannabis advocacy; past arrests; acquitted of 1993 murder-accessory charges.",
+    "citation": "California v. Broadus (acquitted 1996)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Snoop_Dogg"
+  },
+  {
+    "id": "bill-clinton",
+    "name": "Bill Clinton",
+    "kind": "real",
+    "shade": 48,
+    "rationale": "Impeached by the House for perjury and obstruction relating to the Lewinsky matter. Acquitted by the Senate.",
+    "citation": "US House impeachment (1998) · Senate acquittal (1999)",
+    "citationUrl": "https://en.wikipedia.org/wiki/Impeachment_of_Bill_Clinton"
+  },
+  {
+    "id": "banksy",
+    "name": "Banksy",
+    "kind": "real",
+    "shade": 50,
+    "rationale": "Anonymous UK street artist; work is, strictly, vandalism; critically and commercially celebrated anyway.",
+    "citation": "Public record of works · UK Criminal Damage Act applies",
+    "citationUrl": "https://en.wikipedia.org/wiki/Banksy"
+  },
+  {
+    "id": "nelson-mandela",
+    "name": "Nelson Mandela",
+    "kind": "real",
+    "shade": 52,
+    "rationale": "Co-founded MK, sabotage campaigns against apartheid infrastructure. Later Nobel laureate, president.",
+    "citation": "Rivonia Trial (1964) · 27y imprisonment · d. 2013",
+    "citationUrl": "https://en.wikipedia.org/wiki/Nelson_Mandela"
+  },
+  {
+    "id": "theo-van-gogh",
+    "name": "Theo van Gogh",
+    "kind": "real",
+    "shade": 55,
+    "rationale": "Dutch filmmaker and provocateur; inflammatory writing, no criminal record. Murdered in 2004.",
+    "citation": "Public record · d. 2004",
+    "citationUrl": "https://en.wikipedia.org/wiki/Theo_van_Gogh_(film_director)"
+  },
+  {
+    "id": "anthony-bourdain",
+    "name": "Anthony Bourdain",
+    "kind": "real",
+    "shade": 60,
+    "rationale": "Chef, writer, traveller; openly wrote about youthful heroin use and kitchen-industry rough edges. No criminal record.",
+    "citation": "Kitchen Confidential (2000) · d. 2018",
+    "citationUrl": "https://en.wikipedia.org/wiki/Anthony_Bourdain"
+  },
+  {
+    "id": "mlk-jr",
+    "name": "Martin Luther King Jr.",
+    "kind": "real",
+    "shade": 62,
+    "rationale": "~29 arrests for civil disobedience in the service of civil rights.",
+    "citation": "Birmingham, Montgomery, Selma records · d. 1968",
+    "citationUrl": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr."
+  },
+  {
+    "id": "pim-fortuyn",
+    "name": "Pim Fortuyn",
+    "kind": "real",
+    "shade": 62,
+    "rationale": "Dutch politician; highly controversial platform, no criminal record. Assassinated in 2002.",
+    "citation": "Public record · d. 2002",
+    "citationUrl": "https://en.wikipedia.org/wiki/Pim_Fortuyn"
+  },
+  {
+    "id": "gandhi",
+    "name": "Mahatma Gandhi",
+    "kind": "real",
+    "shade": 64,
+    "rationale": "Repeated imprisonment for civil disobedience, satyagraha, tax resistance.",
+    "citation": "British India court records · d. 1948",
+    "citationUrl": "https://en.wikipedia.org/wiki/Mahatma_Gandhi"
+  },
+  {
+    "id": "mark-rutte",
+    "name": "Mark Rutte",
+    "kind": "real",
+    "shade": 68,
+    "rationale": "Longest-serving Dutch PM; multiple cabinet resignations (toeslagenaffaire), repeated 'functional memory' controversies, no criminal record.",
+    "citation": "Parlementaire onderzoekscommissies · public record",
+    "citationUrl": "https://en.wikipedia.org/wiki/Mark_Rutte"
+  },
+  {
+    "id": "thoreau",
+    "name": "Henry David Thoreau",
+    "kind": "real",
+    "shade": 68,
+    "rationale": "Jailed one night for refusing the poll tax in protest of slavery and the Mexican–American war.",
+    "citation": "Concord, Massachusetts (1846) · essay 'Civil Disobedience' · d. 1862",
+    "citationUrl": "https://en.wikipedia.org/wiki/Henry_David_Thoreau"
+  },
+  {
+    "id": "rosa-parks",
+    "name": "Rosa Parks",
+    "kind": "real",
+    "shade": 72,
+    "rationale": "Arrested for refusing to give up her bus seat — deliberate, organised, catalytic.",
+    "citation": "Montgomery, Alabama (1955) · d. 2005",
+    "citationUrl": "https://en.wikipedia.org/wiki/Rosa_Parks"
+  },
+  {
+    "id": "johan-cruyff",
+    "name": "Johan Cruyff",
+    "kind": "real",
+    "shade": 74,
+    "rationale": "Dutch football legend. Public life largely without legal trouble.",
+    "citation": "Public record · d. 2016",
+    "citationUrl": "https://en.wikipedia.org/wiki/Johan_Cruyff"
+  },
+  {
+    "id": "diogenes",
+    "name": "Diogenes of Sinope",
+    "kind": "real",
+    "shade": 74,
+    "rationale": "Lived in a barrel in the agora, insulted Alexander the Great, defaced currency. Cynic philosopher as public provocation.",
+    "citation": "Diogenes Laërtius · 4th century BC",
+    "citationUrl": "https://en.wikipedia.org/wiki/Diogenes"
+  },
+  {
+    "id": "voltaire",
+    "name": "Voltaire",
+    "kind": "real",
+    "shade": 76,
+    "rationale": "Imprisoned in the Bastille twice for satire; exiled for the same.",
+    "citation": "Bastille records (1717, 1726) · d. 1778",
+    "citationUrl": "https://en.wikipedia.org/wiki/Voltaire"
+  },
+  {
+    "id": "oscar-wilde",
+    "name": "Oscar Wilde",
+    "kind": "real",
+    "shade": 78,
+    "rationale": "Imprisoned under laws that no longer exist; the offence was being gay in 1895.",
+    "citation": "R v. Wilde (1895) · 2y hard labour · d. 1900",
+    "citationUrl": "https://en.wikipedia.org/wiki/Oscar_Wilde"
+  },
+  {
+    "id": "alan-turing",
+    "name": "Alan Turing",
+    "kind": "real",
+    "shade": 82,
+    "rationale": "Convicted of 'gross indecency' for a same-sex relationship. Pardoned posthumously.",
+    "citation": "R v. Turing (1952) · Alan Turing Law (2017) · d. 1954",
+    "citationUrl": "https://en.wikipedia.org/wiki/Alan_Turing"
+  },
+  {
+    "id": "galileo",
+    "name": "Galileo Galilei",
+    "kind": "real",
+    "shade": 84,
+    "rationale": "Convicted of heresy for defending heliocentrism. House arrest for life.",
+    "citation": "Roman Inquisition (1633) · d. 1642",
+    "citationUrl": "https://en.wikipedia.org/wiki/Galileo_affair"
+  },
+  {
+    "id": "socrates",
+    "name": "Socrates",
+    "kind": "real",
+    "shade": 86,
+    "rationale": "Convicted of impiety and corrupting youth; drank hemlock rather than compromise.",
+    "citation": "Plato's Apology · 399 BC",
+    "citationUrl": "https://en.wikipedia.org/wiki/Trial_of_Socrates"
+  },
+  {
+    "id": "einstein",
+    "name": "Albert Einstein",
+    "kind": "real",
+    "shade": 88,
+    "rationale": "No documented wrongdoing of public consequence across a very examined life.",
+    "citation": "Public record · d. 1955",
+    "citationUrl": "https://en.wikipedia.org/wiki/Albert_Einstein"
+  },
+  {
+    "id": "mother-teresa",
+    "name": "Mother Teresa",
+    "kind": "real",
+    "shade": 90,
+    "rationale": "Albanian-Indian missionary; decades of hospice work. Historians' critiques exist; no convictions.",
+    "citation": "Nobel Peace Prize (1979) · canonised 2016 · d. 1997",
+    "citationUrl": "https://en.wikipedia.org/wiki/Mother_Teresa"
+  },
+  {
+    "id": "fred-rogers",
+    "name": "Fred Rogers",
+    "kind": "real",
+    "shade": 96,
+    "rationale": "No documented wrongdoing of any consequence across a very public life.",
+    "citation": "Public record · d. 2003",
+    "citationUrl": "https://en.wikipedia.org/wiki/Fred_Rogers"
+  }
+]

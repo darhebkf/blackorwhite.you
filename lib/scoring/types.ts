@@ -70,4 +70,5 @@ export type QuizResult = {
   };
   answered: number;
   total: number;
+  jurisdiction: Jurisdiction;
 };

@@ -13,6 +13,7 @@ type Encoded = {
   s: number;
   a: string;
   x: number[];
+  j?: string;
 };
 
 function toBase64Url(input: string): string {
@@ -38,6 +39,7 @@ export function encodeResult(result: QuizResult): string {
     s: Math.round(result.shade),
     a: result.archetype.id,
     x: AXIS_IDS.map((id) => Math.round(result.axes[id] * 100)),
+    j: result.jurisdiction,
   };
   return toBase64Url(JSON.stringify(payload));
 }
@@ -81,6 +83,7 @@ export function decodeResult(slug: string): QuizResult | null {
   }
 
   const shade = Math.round(p.s);
+  const jurisdiction = typeof p.j === "string" ? p.j : "nl";
 
   return {
     shade,
@@ -90,5 +93,6 @@ export function decodeResult(slug: string): QuizResult | null {
     colorCodes: shadeToColorCodes(shade),
     answered: 0,
     total: 0,
+    jurisdiction,
   };
 }

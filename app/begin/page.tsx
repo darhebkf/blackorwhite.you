@@ -1,14 +1,21 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { JurisdictionPicker } from "@/components/jurisdiction/JurisdictionPicker";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { QuizRunner } from "@/components/quiz/QuizRunner";
+import { FIGURES } from "@/lib/figures/server";
 import {
   DEFAULT_JURISDICTION,
-  isLive,
+  JURISDICTIONS,
   type Jurisdiction,
+  jurisdictionById,
 } from "@/lib/jurisdictions";
 import {
   authoredCount,
+  isLive,
+  liveJurisdictions,
+  QUIZ_LENGTHS,
   type QuizLength,
   questionsFor,
   targetCount,
@@ -18,11 +25,9 @@ type BeginPageProps = {
   searchParams: Promise<{ len?: string; juris?: string }>;
 };
 
-const VALID_LENGTHS: readonly QuizLength[] = ["superfast", "fast", "classic"];
-
 function parseLength(raw: string | undefined): QuizLength {
-  if (raw && VALID_LENGTHS.includes(raw as QuizLength))
-    return raw as QuizLength;
+  if (!raw) return "fast";
+  if (QUIZ_LENGTHS.some((l) => l.id === raw)) return raw;
   return "fast";
 }
 
@@ -39,8 +44,9 @@ export default async function Begin({ searchParams }: BeginPageProps) {
 
   const questions = questionsFor(juris, length);
   const authored = authoredCount(juris);
-  const target = targetCount(length);
-  const shortfall = authored < target;
+  const target = targetCount(length, juris);
+  const jurisdictionDescriptor = jurisdictionById(juris);
+  if (!jurisdictionDescriptor) notFound();
 
   return (
     <main className="min-h-dvh flex flex-col">
@@ -48,14 +54,11 @@ export default async function Begin({ searchParams }: BeginPageProps) {
         section={`§ 002 · ${length[0].toUpperCase()}${length.slice(1)}`}
       />
 
-      {shortfall && (
-        <div className="px-[var(--gutter)] py-3 hairline-bot">
-          <p className="eyebrow" style={{ opacity: 0.7 }}>
-            Beta · {authored} of {target} questions authored so far ·
-            you&rsquo;ll see the ones that are live.
-          </p>
-        </div>
-      )}
+      <JurisdictionPicker
+        current={juris}
+        options={JURISDICTIONS}
+        liveIds={liveJurisdictions()}
+      />
 
       {questions.length === 0 ? (
         <section className="flex-1 flex flex-col items-center justify-center gap-6 px-[var(--gutter)]">
@@ -67,7 +70,13 @@ export default async function Begin({ searchParams }: BeginPageProps) {
           </Link>
         </section>
       ) : (
-        <QuizRunner questions={questions} jurisdiction={juris} />
+        <QuizRunner
+          questions={questions}
+          jurisdiction={jurisdictionDescriptor}
+          figures={FIGURES}
+          authored={authored}
+          target={target}
+        />
       )}
 
       <SiteFooter mark={`§ 002 — Quiz · ${length}`} />

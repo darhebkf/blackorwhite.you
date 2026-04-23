@@ -1,0 +1,23 @@
+[
+  {
+    "id": "superfast",
+    "label": "Superfast",
+    "percentage": 12,
+    "minutes": "≈ 2 min",
+    "blurb": "broad strokes"
+  },
+  {
+    "id": "fast",
+    "label": "Fast",
+    "percentage": 30,
+    "minutes": "≈ 5 min",
+    "blurb": "representative"
+  },
+  {
+    "id": "classic",
+    "label": "Classic",
+    "percentage": 100,
+    "minutes": "≈ 15 min",
+    "blurb": "the whole rubric"
+  }
+]

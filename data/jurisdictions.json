@@ -1,0 +1,40 @@
+[
+  {
+    "id": "nl",
+    "label": "Netherlands",
+    "shortLabel": "NL",
+    "kind": "country"
+  },
+  {
+    "id": "de",
+    "label": "Deutschland",
+    "shortLabel": "DE",
+    "kind": "country"
+  },
+  {
+    "id": "fr",
+    "label": "France",
+    "shortLabel": "FR",
+    "kind": "country"
+  },
+  {
+    "id": "uk",
+    "label": "United Kingdom",
+    "shortLabel": "UK",
+    "kind": "country"
+  },
+  {
+    "id": "europe",
+    "label": "Europe · aggregate",
+    "shortLabel": "EU",
+    "kind": "aggregate",
+    "note": "ECHR + EU directives + member-state averaging"
+  },
+  {
+    "id": "world",
+    "label": "World · aggregate",
+    "shortLabel": "WW",
+    "kind": "aggregate",
+    "note": "ICCPR + Rome Statute + UN conventions"
+  }
+]

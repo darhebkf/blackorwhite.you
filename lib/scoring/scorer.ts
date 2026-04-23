@@ -131,5 +131,6 @@ export function score(
     colorCodes,
     answered: answers.length,
     total: questions.length,
+    jurisdiction,
   };
 }

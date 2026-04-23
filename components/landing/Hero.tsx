@@ -53,8 +53,8 @@ export function Hero() {
             opacity: 0.75,
           }}
         >
-          Questions from Dutch criminal law and international treaties. A shade.
-          A color code. A place on the spectrum. Not a verdict.
+          Questions from criminal law and international treaties. A shade. A
+          color code. A place on the spectrum. Not a verdict.
         </p>
 
         <p className="eyebrow" style={{ opacity: 0.65 }}>

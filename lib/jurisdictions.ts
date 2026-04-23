@@ -1,30 +1,42 @@
-export type Jurisdiction = "nl" | "eu" | "de" | "fr" | "uk" | "us";
+import { readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 
-export type JurisdictionStatus = "live" | "coming_soon";
+export type JurisdictionKind = "country" | "aggregate";
 
 export type JurisdictionDescriptor = {
-  id: Jurisdiction;
+  id: string;
   label: string;
-  status: JurisdictionStatus;
+  shortLabel: string;
+  adjective: string;
+  kind: JurisdictionKind;
+  note?: string;
 };
 
-export const JURISDICTIONS: readonly JurisdictionDescriptor[] = [
-  { id: "nl", label: "Netherlands", status: "live" },
-  { id: "eu", label: "Europe (generic)", status: "coming_soon" },
-  { id: "de", label: "Deutschland", status: "coming_soon" },
-  { id: "fr", label: "France", status: "coming_soon" },
-  { id: "uk", label: "United Kingdom", status: "coming_soon" },
-  { id: "us", label: "United States", status: "coming_soon" },
-] as const;
+const DIR = join(process.cwd(), "data", "jurisdictions");
+
+function loadJurisdictions(): readonly JurisdictionDescriptor[] {
+  const files = readdirSync(DIR).filter((f) => f.endsWith(".json"));
+  return files
+    .map((file) => {
+      const raw = readFileSync(join(DIR, file), "utf-8");
+      return JSON.parse(raw) as JurisdictionDescriptor;
+    })
+    .sort((a, b) => a.label.localeCompare(b.label));
+}
+
+export const JURISDICTIONS: readonly JurisdictionDescriptor[] =
+  loadJurisdictions();
+
+export type Jurisdiction = string;
 
 export const DEFAULT_JURISDICTION: Jurisdiction = "nl";
 
-export function jurisdictionById(id: Jurisdiction): JurisdictionDescriptor {
-  const found = JURISDICTIONS.find((j) => j.id === id);
-  if (!found) throw new Error(`Unknown jurisdiction: ${id}`);
-  return found;
+export function jurisdictionById(
+  id: Jurisdiction,
+): JurisdictionDescriptor | undefined {
+  return JURISDICTIONS.find((j) => j.id === id);
 }
 
-export function isLive(id: Jurisdiction): boolean {
-  return jurisdictionById(id).status === "live";
+export function isKnownJurisdiction(id: string): boolean {
+  return JURISDICTIONS.some((j) => j.id === id);
 }

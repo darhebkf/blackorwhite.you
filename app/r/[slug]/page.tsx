@@ -5,6 +5,8 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ResultCard } from "@/components/result/ResultCard";
 import { ShadeReflector } from "@/components/result/ShadeReflector";
 import { SharedActions } from "@/components/result/SharedActions";
+import { FIGURES } from "@/lib/figures/server";
+import { jurisdictionById } from "@/lib/jurisdictions";
 import { decodeResult } from "@/lib/share";
 
 type SharedResultPageProps = {
@@ -29,6 +31,8 @@ export default async function SharedResultPage({
   const { slug } = await params;
   const result = decodeResult(slug);
   if (!result) notFound();
+  const jurisdictionDescriptor = jurisdictionById(result.jurisdiction);
+  if (!jurisdictionDescriptor) notFound();
 
   return (
     <main className="min-h-dvh flex flex-col">
@@ -37,6 +41,8 @@ export default async function SharedResultPage({
       <ResultCard
         result={result}
         section="§ R · Shared result"
+        figures={FIGURES}
+        jurisdictionAdjective={jurisdictionDescriptor.adjective}
         originLabel="Not yours · take one"
         actions={<SharedActions />}
       />

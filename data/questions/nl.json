@@ -1,0 +1,2179 @@
+[
+  {
+    "id": "nl.prescription-share",
+    "prompt": "A friend is in pain. You have leftover prescription painkillers or antibiotics. How often do you share?",
+    "format": "likert",
+    "severity": { "nl": 5 },
+    "axes": {
+      "principled_pragmatic": 0.5,
+      "victim_victimless": 0.3,
+      "self_other": -0.3,
+      "realist_absolutist": -0.6
+    },
+    "citation": {
+      "nl": {
+        "statute": "Geneesmiddelenwet art. 40",
+        "note": "Prescription meds are personal; passing them on is illegal regardless of intent."
+      }
+    },
+    "tags": ["everyday", "obscure-law"]
+  },
+  {
+    "id": "nl.copyright-social",
+    "prompt": "How often do you use copyrighted music or TV/film clips in your own social-media posts without a license?",
+    "format": "likert",
+    "severity": { "nl": 3 },
+    "axes": {
+      "victim_victimless": 0.5,
+      "ideological_opportunistic": 0.4,
+      "private_performative": 0.5,
+      "realist_absolutist": -0.7
+    },
+    "citation": {
+      "nl": {
+        "statute": "Auteurswet art. 12-13",
+        "note": "Platform licences don't transfer to your content."
+      }
+    },
+    "tags": ["digital", "obscure-law"]
+  },
+  {
+    "id": "nl.fishing-vispas",
+    "prompt": "How often do you fish in Dutch public water without carrying a valid VISpas?",
+    "format": "likert",
+    "severity": { "nl": 3 },
+    "axes": {
+      "victim_victimless": 0.4,
+      "ideological_opportunistic": 0.4,
+      "realist_absolutist": -0.6
+    },
+    "citation": {
+      "nl": {
+        "statute": "Visserijwet 1963 art. 9",
+        "note": "VISpas is required for most public inland water."
+      }
+    },
+    "tags": ["obscure-law"]
+  },
+  {
+    "id": "nl.wildflowers-pick",
+    "prompt": "How often have you picked wildflowers, mushrooms, or plants inside a Dutch nature reserve or along a path marked as protected?",
+    "format": "likert",
+    "severity": { "nl": 4 },
+    "axes": {
+      "victim_victimless": 0.2,
+      "calculated_spontaneous": 0.6,
+      "realist_absolutist": -0.6
+    },
+    "citation": {
+      "nl": {
+        "statute": "Wet natuurbescherming art. 3.5 · 3.10",
+        "note": "Picking protected species or within Natura 2000 zones is prohibited."
+      }
+    },
+    "tags": ["obscure-law"]
+  },
+  {
+    "id": "nl.bike-bell",
+    "prompt": "How often do you cycle without a working bell or light at night?",
+    "format": "likert",
+    "severity": { "nl": 2 },
+    "axes": {
+      "victim_victimless": 0.4,
+      "self_other": -0.3,
+      "calculated_spontaneous": 0.5,
+      "realist_absolutist": -0.5
+    },
+    "citation": {
+      "nl": {
+        "statute": "RVV 1990 art. 30a · art. 35",
+        "note": "Bell and front/rear light are legally required."
+      }
+    },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.fireworks-illegal",
+    "prompt": "How often do you set off fireworks outside the legal NYE window (Dec 31 18:00 → Jan 1 02:00)?",
+    "format": "likert",
+    "severity": { "nl": 3 },
+    "axes": {
+      "rebel_conformist": -0.4,
+      "victim_victimless": 0.1,
+      "self_other": 0.4,
+      "calculated_spontaneous": 0.5,
+      "realist_absolutist": -0.6
+    },
+    "citation": {
+      "nl": { "statute": "Vuurwerkbesluit art. 2.3.6" }
+    },
+    "tags": ["everyday", "NL-specific"]
+  },
+  {
+    "id": "nl.hand-signal",
+    "prompt": "How often do you turn on your bike without signalling with your arm?",
+    "format": "likert",
+    "severity": { "nl": 1 },
+    "axes": {
+      "victim_victimless": 0.3,
+      "self_other": 0.2,
+      "calculated_spontaneous": 0.6,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "RVV 1990 art. 54" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.fiets-rood",
+    "prompt": "How often do you cycle through a red light?",
+    "format": "likert",
+    "severity": { "nl": 3 },
+    "axes": {
+      "rebel_conformist": -0.4,
+      "victim_victimless": 0.7,
+      "self_other": -0.3,
+      "calculated_spontaneous": 0.6,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "RVV 1990 art. 62" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.speeding",
+    "prompt": "How often do you drive more than 20 km/h over the speed limit?",
+    "format": "likert",
+    "severity": { "nl": 8 },
+    "axes": {
+      "victim_victimless": -0.2,
+      "self_other": 0.3,
+      "calculated_spontaneous": 0.3,
+      "ideological_opportunistic": 0.5,
+      "realist_absolutist": -0.4
+    },
+    "citation": { "nl": { "statute": "Wegenverkeerswet art. 20 · RVV 1990" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.phone-driving",
+    "prompt": "How often do you use your phone while driving or cycling?",
+    "format": "likert",
+    "severity": { "nl": 6 },
+    "axes": {
+      "self_other": 0.2,
+      "calculated_spontaneous": 0.5,
+      "ideological_opportunistic": 0.6,
+      "realist_absolutist": -0.4
+    },
+    "citation": { "nl": { "statute": "RVV 1990 art. 61a" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.turn-signal",
+    "prompt": "How often do you skip signalling turns or lane changes?",
+    "format": "likert",
+    "severity": { "nl": 2 },
+    "axes": {
+      "victim_victimless": 0.2,
+      "self_other": 0.3,
+      "calculated_spontaneous": 0.4,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "RVV 1990 art. 54" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.following-distance",
+    "prompt": "How often do you tailgate someone going slower than you'd like?",
+    "format": "likert",
+    "severity": { "nl": 4 },
+    "axes": {
+      "self_other": 0.5,
+      "calculated_spontaneous": 0.6,
+      "ideological_opportunistic": 0.5,
+      "private_performative": 0.4
+    },
+    "citation": { "nl": { "statute": "RVV 1990 art. 19" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.parking",
+    "prompt": "How often do you park where you technically shouldn't (loading zones, disabled spots, blocked driveways)?",
+    "format": "likert",
+    "severity": { "nl": 5 },
+    "axes": {
+      "self_other": 0.4,
+      "calculated_spontaneous": 0.3,
+      "ideological_opportunistic": 0.7,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "RVV 1990 art. 24" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.ov-no-ticket",
+    "prompt": "How often do you board a tram, bus, or train without checking in (zwartrijden)?",
+    "format": "likert",
+    "severity": { "nl": 6 },
+    "axes": {
+      "principled_pragmatic": 0.5,
+      "rebel_conformist": -0.2,
+      "victim_victimless": 0.3,
+      "self_other": 0.3,
+      "ideological_opportunistic": 0.6
+    },
+    "citation": { "nl": { "statute": "Wp2000 art. 70" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.helmet-off",
+    "prompt": "How often do you ride a moped or e-scooter without the required helmet?",
+    "format": "likert",
+    "severity": { "nl": 5 },
+    "axes": {
+      "self_other": -0.7,
+      "calculated_spontaneous": 0.5,
+      "ideological_opportunistic": 0.4,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "RVV 1990 art. 60" } },
+    "tags": ["traffic", "NL-specific"]
+  },
+  {
+    "id": "nl.pedestrian-right",
+    "prompt": "How often do you cross on a red pedestrian signal?",
+    "format": "likert",
+    "severity": { "nl": 1 },
+    "axes": {
+      "rebel_conformist": -0.2,
+      "victim_victimless": 0.9,
+      "self_other": -0.1,
+      "calculated_spontaneous": 0.7,
+      "realist_absolutist": -0.6
+    },
+    "citation": { "nl": { "statute": "RVV 1990 art. 49" } },
+    "tags": ["traffic", "everyday"]
+  },
+  {
+    "id": "nl.bike-drunk",
+    "prompt": "How often do you cycle home after more than two drinks?",
+    "format": "likert",
+    "severity": { "nl": 8 },
+    "axes": {
+      "self_other": -0.4,
+      "calculated_spontaneous": 0.5,
+      "ideological_opportunistic": 0.5,
+      "realist_absolutist": -0.4
+    },
+    "citation": { "nl": { "statute": "Wegenverkeerswet art. 8" } },
+    "tags": ["traffic", "NL-specific"]
+  },
+  {
+    "id": "nl.weed-private",
+    "prompt": "How often do you use cannabis in a private setting (home, a friend's place)?",
+    "format": "likert",
+    "severity": { "nl": 1 },
+    "axes": {
+      "victim_victimless": 0.8,
+      "self_other": -0.8,
+      "calculated_spontaneous": 0.2,
+      "realist_absolutist": -0.6
+    },
+    "citation": {
+      "nl": {
+        "statute": "Opiumwet art. 3 · lijst II",
+        "note": "Tolerated for personal use under 5g."
+      }
+    },
+    "tags": ["drugs", "NL-specific"]
+  },
+  {
+    "id": "nl.weed-public",
+    "prompt": "How often do you smoke cannabis in public, outside a coffee shop?",
+    "format": "likert",
+    "severity": { "nl": 4 },
+    "axes": {
+      "rebel_conformist": -0.3,
+      "victim_victimless": 0.6,
+      "self_other": -0.5,
+      "calculated_spontaneous": 0.5,
+      "realist_absolutist": -0.6
+    },
+    "citation": {
+      "nl": {
+        "statute": "Opiumwet art. 3 · APV",
+        "note": "Locally restricted; many municipalities ban public use."
+      }
+    },
+    "tags": ["drugs", "NL-specific"]
+  },
+  {
+    "id": "nl.hard-drugs",
+    "prompt": "How often do you use hard drugs (Opiumwet lijst I — MDMA, cocaine, heroin, etc.)?",
+    "format": "likert",
+    "severity": { "nl": 25 },
+    "axes": {
+      "rebel_conformist": -0.3,
+      "victim_victimless": 0.3,
+      "self_other": -0.8,
+      "calculated_spontaneous": 0.3,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "Opiumwet art. 2 · lijst I" } },
+    "tags": ["drugs"]
+  },
+  {
+    "id": "nl.drugs-share",
+    "prompt": "How often do you share drugs with friends at parties or gatherings?",
+    "format": "likert",
+    "severity": { "nl": 18 },
+    "axes": {
+      "rebel_conformist": -0.4,
+      "victim_victimless": 0.4,
+      "self_other": 0.2,
+      "private_performative": 0.3,
+      "realist_absolutist": -0.7
+    },
+    "citation": {
+      "nl": {
+        "statute": "Opiumwet art. 2 · art. 3",
+        "note": "Giving is technically dealing under the Opiumwet."
+      }
+    },
+    "tags": ["drugs"]
+  },
+  {
+    "id": "nl.drugs-sell",
+    "prompt": "A friend asks if you know where to get something. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 45 },
+    "citation": { "nl": { "statute": "Opiumwet art. 2 lid B · art. 11" } },
+    "tags": ["drugs"],
+    "answers": [
+      {
+        "label": "I don't have access or wouldn't pass it along",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.6, "realist_absolutist": 0.4 }
+      },
+      {
+        "label": "Connect them to someone else, I don't handle",
+        "intensity": 0.25,
+        "axes": { "private_performative": -0.3, "active_omissive": 0.3 }
+      },
+      {
+        "label": "Share some of mine, no money changes hands",
+        "intensity": 0.5,
+        "axes": { "rebel_conformist": -0.3, "victim_victimless": 0.4 }
+      },
+      {
+        "label": "Sell at cost or small markup",
+        "intensity": 0.8,
+        "axes": {
+          "principled_pragmatic": 0.7,
+          "ideological_opportunistic": 0.7,
+          "calculated_spontaneous": -0.4
+        }
+      },
+      {
+        "label": "This is income for me",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": 0.9,
+          "ideological_opportunistic": 1,
+          "calculated_spontaneous": -0.7,
+          "self_other": 0.4
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.drugs-work",
+    "prompt": "How often do you use substances (recreational or harder) during work hours?",
+    "format": "likert",
+    "severity": { "nl": 12 },
+    "axes": {
+      "self_other": -0.5,
+      "calculated_spontaneous": 0.4,
+      "ideological_opportunistic": 0.6,
+      "private_performative": -0.7
+    },
+    "citation": { "nl": { "statute": "Arbowet · Opiumwet" } },
+    "tags": ["drugs", "work"]
+  },
+  {
+    "id": "nl.drugs-driving",
+    "prompt": "How often do you drive or cycle after using recreational substances?",
+    "format": "likert",
+    "severity": { "nl": 18 },
+    "axes": {
+      "self_other": 0.3,
+      "calculated_spontaneous": 0.5,
+      "ideological_opportunistic": 0.5,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "Wegenverkeerswet art. 8" } },
+    "tags": ["drugs", "traffic"]
+  },
+  {
+    "id": "nl.drugs-minors",
+    "prompt": "A 17-year-old asks you to buy them alcohol at the shop. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 30 },
+    "citation": {
+      "nl": { "statute": "Drank- en Horecawet art. 20 · Opiumwet" }
+    },
+    "tags": ["drugs", "severe"],
+    "answers": [
+      {
+        "label": "Never — six months and they can buy it themselves",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.6, "realist_absolutist": 0.7 }
+      },
+      {
+        "label": "Explain why I won't",
+        "intensity": 0.1,
+        "axes": { "principled_pragmatic": -0.4 }
+      },
+      {
+        "label": "Beer but not spirits",
+        "intensity": 0.5,
+        "axes": {
+          "principled_pragmatic": 0.4,
+          "victim_victimless": 0.2,
+          "upward_downward": 0.3
+        }
+      },
+      {
+        "label": "Whatever they ask, as long as they're safe about it",
+        "intensity": 0.8,
+        "axes": {
+          "rebel_conformist": -0.4,
+          "victim_victimless": 0.3,
+          "upward_downward": 0.5
+        }
+      },
+      {
+        "label": "I've done this plenty",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -0.3,
+          "self_other": 0.5,
+          "upward_downward": 0.7,
+          "private_performative": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.zwart-werk",
+    "prompt": "How often do you work for cash that goes undeclared (zwart werk)?",
+    "format": "likert",
+    "severity": { "nl": 15 },
+    "axes": {
+      "principled_pragmatic": 0.7,
+      "victim_victimless": 0.3,
+      "calculated_spontaneous": -0.3,
+      "ideological_opportunistic": 0.5,
+      "private_performative": -0.7,
+      "realist_absolutist": -0.5
+    },
+    "citation": {
+      "nl": { "statute": "Wet op de loonbelasting 1964 · Sr art. 225" }
+    },
+    "tags": ["tax", "fraud"]
+  },
+  {
+    "id": "nl.tax-deductions",
+    "prompt": "How often do you stretch the truth on deductions or business expenses when filing taxes?",
+    "format": "likert",
+    "severity": { "nl": 18 },
+    "axes": {
+      "principled_pragmatic": 0.8,
+      "calculated_spontaneous": -0.7,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.7,
+      "upward_downward": -0.3
+    },
+    "citation": { "nl": { "statute": "AWR art. 68-69 · Sr art. 225" } },
+    "tags": ["tax", "fraud"]
+  },
+  {
+    "id": "nl.tax-under-report",
+    "prompt": "At tax time, side income from cash gigs, tips, or under-the-table work — where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 20 },
+    "citation": { "nl": { "statute": "AWR art. 68-69" } },
+    "tags": ["tax", "fraud"],
+    "answers": [
+      {
+        "label": "Report all of it, to the euro",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.8, "realist_absolutist": 0.7 }
+      },
+      {
+        "label": "Report most, round down on small cash",
+        "intensity": 0.3,
+        "axes": { "calculated_spontaneous": -0.3 }
+      },
+      {
+        "label": "Report trackable stuff, skip the cash",
+        "intensity": 0.6,
+        "axes": {
+          "principled_pragmatic": 0.6,
+          "ideological_opportunistic": 0.6,
+          "private_performative": -0.5
+        }
+      },
+      {
+        "label": "Report only what was already on a payslip",
+        "intensity": 0.9,
+        "axes": {
+          "principled_pragmatic": 0.8,
+          "calculated_spontaneous": -0.5,
+          "ideological_opportunistic": 0.8
+        }
+      },
+      {
+        "label": "I don't declare side income",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": 1,
+          "calculated_spontaneous": -0.7,
+          "ideological_opportunistic": 0.9,
+          "private_performative": -0.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.benefit-stretch",
+    "prompt": "Have you ever claimed a benefit or allowance (toeslagen, WW, huurtoeslag) while knowing you didn't fully qualify?",
+    "format": "scenario",
+    "severity": { "nl": 35 },
+    "citation": { "nl": { "statute": "Sr art. 227b · Awir" } },
+    "tags": ["tax", "fraud"],
+    "answers": [
+      {
+        "label": "Never — if I didn't qualify, I didn't claim",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.9, "realist_absolutist": 0.7 }
+      },
+      {
+        "label": "Stretched the definition once, in a tight spot",
+        "intensity": 0.4,
+        "axes": {
+          "principled_pragmatic": 0.3,
+          "ideological_opportunistic": 0.5
+        }
+      },
+      {
+        "label": "More than once — I know how to phrase things",
+        "intensity": 0.8,
+        "axes": {
+          "principled_pragmatic": 0.9,
+          "calculated_spontaneous": -0.7,
+          "ideological_opportunistic": 0.9,
+          "private_performative": -0.8
+        }
+      },
+      {
+        "label": "Routinely — it's money on the table",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": 1,
+          "calculated_spontaneous": -1,
+          "ideological_opportunistic": 1,
+          "private_performative": -0.9,
+          "upward_downward": -0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.insurance-claim",
+    "prompt": "How often do you stretch a truth (or add a bit) on insurance claims?",
+    "format": "likert",
+    "severity": { "nl": 22 },
+    "axes": {
+      "principled_pragmatic": 0.7,
+      "victim_victimless": 0.2,
+      "calculated_spontaneous": -0.5,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.7
+    },
+    "citation": { "nl": { "statute": "Sr art. 326 · oplichting" } },
+    "tags": ["tax", "fraud"]
+  },
+  {
+    "id": "nl.tax-avoidance",
+    "prompt": "How often do you use legal-but-aggressive tax constructions (shell entities, offshore, aggressive structures)?",
+    "format": "likert",
+    "severity": { "nl": 5 },
+    "axes": {
+      "principled_pragmatic": 0.8,
+      "calculated_spontaneous": -0.9,
+      "ideological_opportunistic": 0.6,
+      "private_performative": -0.6,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "AWR · legal but ethically adjacent" } },
+    "tags": ["tax"]
+  },
+  {
+    "id": "nl.crypto-undeclared",
+    "prompt": "How often do you not declare crypto or foreign investment gains when filing box 3?",
+    "format": "likert",
+    "severity": { "nl": 15 },
+    "axes": {
+      "principled_pragmatic": 0.7,
+      "calculated_spontaneous": -0.4,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.7
+    },
+    "citation": { "nl": { "statute": "Wet IB 2001 · box 3" } },
+    "tags": ["tax", "digital"]
+  },
+  {
+    "id": "nl.inherit-under",
+    "prompt": "How often do you (or your family) under-declare inheritance or gifts to reduce tax?",
+    "format": "likert",
+    "severity": { "nl": 25 },
+    "axes": {
+      "principled_pragmatic": 0.8,
+      "calculated_spontaneous": -0.8,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.9
+    },
+    "citation": { "nl": { "statute": "Successiewet · AWR art. 69" } },
+    "tags": ["tax", "fraud"]
+  },
+  {
+    "id": "nl.expense-personal",
+    "prompt": "How often do you put personal purchases on a company card or claim them as business?",
+    "format": "likert",
+    "severity": { "nl": 20 },
+    "axes": {
+      "principled_pragmatic": 0.8,
+      "self_other": 0.5,
+      "calculated_spontaneous": -0.4,
+      "ideological_opportunistic": 0.8,
+      "private_performative": -0.7,
+      "upward_downward": -0.2
+    },
+    "citation": { "nl": { "statute": "Sr art. 225 · art. 321" } },
+    "tags": ["tax", "work", "fraud"]
+  },
+  {
+    "id": "nl.piracy",
+    "prompt": "How often do you download or stream pirated movies, shows, music, or software?",
+    "format": "likert",
+    "severity": { "nl": 5 },
+    "axes": {
+      "rebel_conformist": -0.3,
+      "victim_victimless": 0.6,
+      "self_other": 0.2,
+      "ideological_opportunistic": 0.2,
+      "realist_absolutist": -0.7
+    },
+    "citation": { "nl": { "statute": "Auteurswet art. 45" } },
+    "tags": ["digital", "everyday"]
+  },
+  {
+    "id": "nl.streaming-sharing",
+    "prompt": "How often do you use or share a paid streaming account (Netflix, Spotify, Disney+, etc.) outside the household?",
+    "format": "likert",
+    "severity": { "nl": 2 },
+    "axes": {
+      "victim_victimless": 0.7,
+      "self_other": 0.2,
+      "ideological_opportunistic": 0.5,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "Auteurswet · civiel" } },
+    "tags": ["digital", "everyday"]
+  },
+  {
+    "id": "nl.adblock",
+    "prompt": "How often do you browse ad-supported sites with an ad-blocker on?",
+    "format": "likert",
+    "severity": { "nl": 1 },
+    "axes": {
+      "victim_victimless": 0.5,
+      "self_other": 0.3,
+      "ideological_opportunistic": 0.3,
+      "realist_absolutist": -0.5
+    },
+    "citation": { "nl": { "statute": "civiel · ToS" } },
+    "tags": ["digital", "everyday"]
+  },
+  {
+    "id": "nl.account-access",
+    "prompt": "How often do you access someone else's accounts (email, social, work) without their explicit permission?",
+    "format": "likert",
+    "severity": { "nl": 25 },
+    "axes": {
+      "principled_pragmatic": 0.5,
+      "victim_victimless": -0.7,
+      "self_other": 0.6,
+      "calculated_spontaneous": -0.5,
+      "private_performative": -0.7
+    },
+    "citation": { "nl": { "statute": "Sr art. 138ab · computervredebreuk" } },
+    "tags": ["digital", "privacy"]
+  },
+  {
+    "id": "nl.scrape-share",
+    "prompt": "How often do you scrape, harvest, or share personal data of others without consent?",
+    "format": "likert",
+    "severity": { "nl": 20 },
+    "axes": {
+      "victim_victimless": -0.6,
+      "self_other": 0.6,
+      "calculated_spontaneous": -0.6,
+      "ideological_opportunistic": 0.4,
+      "private_performative": -0.6
+    },
+    "citation": { "nl": { "statute": "AVG / GDPR · Sr art. 138ab" } },
+    "tags": ["digital", "privacy"]
+  },
+  {
+    "id": "nl.fake-id-online",
+    "prompt": "How often do you use fake IDs or impersonate documents online (age verification, identity forms)?",
+    "format": "likert",
+    "severity": { "nl": 15 },
+    "axes": {
+      "principled_pragmatic": 0.6,
+      "rebel_conformist": -0.4,
+      "victim_victimless": 0.4,
+      "calculated_spontaneous": -0.4,
+      "ideological_opportunistic": 0.6
+    },
+    "citation": { "nl": { "statute": "Sr art. 231 · art. 225" } },
+    "tags": ["digital", "fraud"]
+  },
+  {
+    "id": "nl.ai-impersonate",
+    "prompt": "How often do you use AI to impersonate someone's voice, image, or writing without their consent?",
+    "format": "likert",
+    "severity": { "nl": 25 },
+    "axes": {
+      "principled_pragmatic": 0.5,
+      "victim_victimless": -0.7,
+      "self_other": 0.6,
+      "calculated_spontaneous": -0.6,
+      "private_performative": 0.3
+    },
+    "citation": {
+      "nl": { "statute": "Sr art. 139h (deepfake seksuele beelden) · AVG" }
+    },
+    "tags": ["digital", "privacy"]
+  },
+  {
+    "id": "nl.doxing-stance",
+    "prompt": "Someone awful is in the news. Publishing their home address and workplace would turn up consequences. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 15 },
+    "citation": {
+      "nl": { "statute": "Sr art. 285b · stalking / Sr art. 261" }
+    },
+    "tags": ["digital", "speech"],
+    "answers": [
+      {
+        "label": "Never — consequences belong to courts",
+        "intensity": 0,
+        "axes": {
+          "principled_pragmatic": -0.9,
+          "realist_absolutist": 0.8,
+          "active_omissive": 0.5
+        }
+      },
+      {
+        "label": "Share what's already public, nothing new",
+        "intensity": 0.2,
+        "axes": {
+          "principled_pragmatic": -0.3,
+          "ideological_opportunistic": -0.3
+        }
+      },
+      {
+        "label": "Amplify if the target is powerful enough",
+        "intensity": 0.6,
+        "axes": {
+          "principled_pragmatic": -0.5,
+          "rebel_conformist": -0.5,
+          "upward_downward": -0.8,
+          "active_omissive": -0.7,
+          "private_performative": 0.5
+        }
+      },
+      {
+        "label": "Post everything — let people find them",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -0.8,
+          "self_other": 0.9,
+          "calculated_spontaneous": -0.3,
+          "private_performative": 1,
+          "active_omissive": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.fake-reviews",
+    "prompt": "How often do you write or buy fake reviews (for your own business, a friend's, or against a competitor)?",
+    "format": "likert",
+    "severity": { "nl": 10 },
+    "axes": {
+      "principled_pragmatic": 0.7,
+      "victim_victimless": -0.3,
+      "calculated_spontaneous": -0.6,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.4
+    },
+    "citation": {
+      "nl": { "statute": "Wet oneerlijke handelspraktijken · art. 6:194" }
+    },
+    "tags": ["digital", "fraud"]
+  },
+  {
+    "id": "nl.resume-stretch",
+    "prompt": "How often do you stretch the truth on a CV or job application (dates, titles, skills)?",
+    "format": "likert",
+    "severity": { "nl": 10 },
+    "axes": {
+      "principled_pragmatic": 0.7,
+      "calculated_spontaneous": -0.5,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.5
+    },
+    "citation": { "nl": { "statute": "Sr art. 225 (if used contractually)" } },
+    "tags": ["work"]
+  },
+  {
+    "id": "nl.work-time",
+    "prompt": "How often do you spend a significant chunk of paid work hours on personal things (with nobody asking)?",
+    "format": "likert",
+    "severity": { "nl": 3 },
+    "axes": {
+      "victim_victimless": 0.5,
+      "self_other": 0.2,
+      "calculated_spontaneous": 0.2,
+      "ideological_opportunistic": 0.6,
+      "private_performative": -0.6
+    },
+    "citation": { "nl": { "statute": "civiel · arbeidsovereenkomst" } },
+    "tags": ["work"]
+  },
+  {
+    "id": "nl.side-gig-work",
+    "prompt": "How often do you run a side gig or freelance work on your employer's time or equipment?",
+    "format": "likert",
+    "severity": { "nl": 6 },
+    "axes": {
+      "principled_pragmatic": 0.6,
+      "victim_victimless": 0.2,
+      "self_other": 0.3,
+      "calculated_spontaneous": -0.3,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.7
+    },
+    "citation": { "nl": { "statute": "civiel · Sr art. 321 if material" } },
+    "tags": ["work"]
+  },
+  {
+    "id": "nl.expense-pad",
+    "prompt": "How often do you inflate or add a bit to expense claims at work?",
+    "format": "likert",
+    "severity": { "nl": 15 },
+    "axes": {
+      "principled_pragmatic": 0.7,
+      "self_other": 0.4,
+      "calculated_spontaneous": -0.5,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.7,
+      "upward_downward": -0.3
+    },
+    "citation": { "nl": { "statute": "Sr art. 225 · art. 321" } },
+    "tags": ["work", "fraud"]
+  },
+  {
+    "id": "nl.witness-work-wrong",
+    "prompt": "You see your employer doing something clearly shady (fraud, safety cover-up, serious harassment). Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 8 },
+    "citation": {
+      "nl": {
+        "statute": "Huis voor klokkenluiders · Wet bescherming klokkenluiders"
+      }
+    },
+    "tags": ["work", "omission"],
+    "answers": [
+      {
+        "label": "Report internally and escalate externally if ignored",
+        "intensity": 0,
+        "axes": {
+          "principled_pragmatic": -1,
+          "rebel_conformist": -0.6,
+          "active_omissive": -1,
+          "upward_downward": -0.7
+        }
+      },
+      {
+        "label": "Report internally only",
+        "intensity": 0.2,
+        "axes": { "principled_pragmatic": -0.6, "active_omissive": -0.5 }
+      },
+      {
+        "label": "Flag it to trusted colleagues, don't escalate",
+        "intensity": 0.5,
+        "axes": {
+          "principled_pragmatic": -0.2,
+          "private_performative": -0.5,
+          "active_omissive": 0.3
+        }
+      },
+      {
+        "label": "Keep my head down — not my job to fix it",
+        "intensity": 0.9,
+        "axes": {
+          "principled_pragmatic": 0.5,
+          "private_performative": -0.7,
+          "active_omissive": 1,
+          "realist_absolutist": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.witness-discrim",
+    "prompt": "You see workplace discrimination or harassment aimed at a colleague. What's your usual move?",
+    "format": "scenario",
+    "severity": { "nl": 5 },
+    "citation": { "nl": { "statute": "AWGB · Sr art. 137c-137g" } },
+    "tags": ["work", "omission"],
+    "answers": [
+      {
+        "label": "Intervene publicly and support the colleague",
+        "intensity": 0,
+        "axes": {
+          "principled_pragmatic": -1,
+          "private_performative": 0.5,
+          "active_omissive": -1,
+          "upward_downward": -0.5
+        }
+      },
+      {
+        "label": "Check in privately, push them to report",
+        "intensity": 0.2,
+        "axes": {
+          "principled_pragmatic": -0.6,
+          "private_performative": -0.5,
+          "active_omissive": -0.5
+        }
+      },
+      {
+        "label": "Mention it once, drop it if it's awkward",
+        "intensity": 0.6,
+        "axes": { "principled_pragmatic": 0.2, "active_omissive": 0.5 }
+      },
+      {
+        "label": "Stay out — everyone's an adult",
+        "intensity": 0.9,
+        "axes": {
+          "principled_pragmatic": 0.6,
+          "active_omissive": 1,
+          "private_performative": -0.7
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.violence-conflict",
+    "prompt": "When someone really crosses a line with you physically — a shove, a threat — where do you usually land?",
+    "format": "scenario",
+    "severity": { "nl": 25 },
+    "citation": { "nl": { "statute": "Sr art. 300 · art. 41 (noodweer)" } },
+    "tags": ["violence"],
+    "answers": [
+      {
+        "label": "Never been close to that situation",
+        "intensity": 0,
+        "axes": { "active_omissive": 0.3 }
+      },
+      {
+        "label": "De-escalate and walk away",
+        "intensity": 0.2,
+        "axes": { "principled_pragmatic": -0.7, "calculated_spontaneous": -0.5 }
+      },
+      {
+        "label": "Hold the line verbally, no physical",
+        "intensity": 0.4,
+        "axes": { "principled_pragmatic": -0.3, "rebel_conformist": -0.2 }
+      },
+      {
+        "label": "Got physical, but only reactively",
+        "intensity": 0.7,
+        "axes": {
+          "victim_victimless": -0.5,
+          "self_other": 0.6,
+          "calculated_spontaneous": 0.5
+        }
+      },
+      {
+        "label": "I've been the one to start it",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -1,
+          "self_other": 1,
+          "calculated_spontaneous": 0.4,
+          "active_omissive": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.violence-bar",
+    "prompt": "Someone pushes your buttons in a bar or out at night. Their friend tells them to stop but they keep going. What's your usual next step?",
+    "format": "scenario",
+    "severity": { "nl": 18 },
+    "citation": { "nl": { "statute": "Sr art. 266 (belediging) · art. 300" } },
+    "tags": ["violence"],
+    "answers": [
+      {
+        "label": "Ignore, walk to another part of the place",
+        "intensity": 0,
+        "axes": {
+          "principled_pragmatic": -0.4,
+          "calculated_spontaneous": -0.5,
+          "active_omissive": 0.5
+        }
+      },
+      {
+        "label": "Tell them to back off, no more",
+        "intensity": 0.3,
+        "axes": { "principled_pragmatic": -0.2 }
+      },
+      {
+        "label": "Get in their face, see if they escalate",
+        "intensity": 0.7,
+        "axes": {
+          "rebel_conformist": -0.5,
+          "self_other": 0.5,
+          "calculated_spontaneous": 0.6
+        }
+      },
+      {
+        "label": "First punch usually lands better than second",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -0.9,
+          "self_other": 1,
+          "calculated_spontaneous": 0.5,
+          "private_performative": 0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.violence-self-def",
+    "prompt": "How close does a threat have to get before you'd use physical force to stop it?",
+    "format": "scenario",
+    "severity": { "nl": 8 },
+    "citation": { "nl": { "statute": "Sr art. 41 (noodweer)" } },
+    "tags": ["violence"],
+    "answers": [
+      {
+        "label": "Only if I'm actually being attacked right now",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.7, "calculated_spontaneous": -0.5 }
+      },
+      {
+        "label": "If they clearly move toward me with intent",
+        "intensity": 0.2,
+        "axes": { "principled_pragmatic": -0.3 }
+      },
+      {
+        "label": "If their posture screams fight",
+        "intensity": 0.5,
+        "axes": { "calculated_spontaneous": 0.4 }
+      },
+      {
+        "label": "Pre-emptive is smarter — strike first, apologize later",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": 0.6,
+          "self_other": 0.8,
+          "calculated_spontaneous": 0.3,
+          "realist_absolutist": -0.7
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.violence-defense-other",
+    "prompt": "You see a stranger being physically attacked in the street. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 6 },
+    "citation": {
+      "nl": { "statute": "Sr art. 41 · art. 450 (verlatend/hulpverlening)" }
+    },
+    "tags": ["violence", "omission"],
+    "answers": [
+      {
+        "label": "Intervene physically to stop it",
+        "intensity": 0.4,
+        "axes": {
+          "principled_pragmatic": -0.8,
+          "active_omissive": -1,
+          "upward_downward": -0.5,
+          "self_other": 0.5
+        }
+      },
+      {
+        "label": "Shout, distract, record, call police",
+        "intensity": 0.1,
+        "axes": { "principled_pragmatic": -0.7, "active_omissive": -0.7 }
+      },
+      {
+        "label": "Call police, stay at a distance",
+        "intensity": 0.2,
+        "axes": { "principled_pragmatic": -0.3, "calculated_spontaneous": -0.5 }
+      },
+      {
+        "label": "Keep walking, not my fight",
+        "intensity": 0.9,
+        "axes": {
+          "principled_pragmatic": 0.5,
+          "active_omissive": 1,
+          "private_performative": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.violence-family",
+    "prompt": "Household arguments over the years. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 45 },
+    "citation": {
+      "nl": { "statute": "Sr art. 300 · art. 304 (huiselijk geweld)" }
+    },
+    "tags": ["violence", "severe"],
+    "answers": [
+      {
+        "label": "Never physical in any direction",
+        "intensity": 0,
+        "axes": { "calculated_spontaneous": -0.4 }
+      },
+      {
+        "label": "A slammed door, maybe a thrown object",
+        "intensity": 0.3,
+        "axes": { "calculated_spontaneous": 0.5, "private_performative": -0.5 }
+      },
+      {
+        "label": "One-off shove or slap, discussed after",
+        "intensity": 0.6,
+        "axes": {
+          "victim_victimless": -0.5,
+          "self_other": 0.4,
+          "calculated_spontaneous": 0.5
+        }
+      },
+      {
+        "label": "Multiple moments where someone ended up hurt",
+        "intensity": 0.9,
+        "axes": {
+          "victim_victimless": -0.8,
+          "self_other": 0.8,
+          "private_performative": -0.8
+        }
+      },
+      {
+        "label": "It's been a recurring pattern",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -1,
+          "self_other": 1,
+          "private_performative": -0.9,
+          "active_omissive": -0.7
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.violence-animal",
+    "prompt": "Your pet does something frustrating at 3am. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 20 },
+    "citation": { "nl": { "statute": "Wet dieren art. 2.1 · Sr art. 254" } },
+    "tags": ["violence"],
+    "answers": [
+      {
+        "label": "Sigh, handle it, never physical",
+        "intensity": 0,
+        "axes": { "calculated_spontaneous": -0.3 }
+      },
+      {
+        "label": "Raise voice, no contact",
+        "intensity": 0.2,
+        "axes": { "calculated_spontaneous": 0.3 }
+      },
+      {
+        "label": "A swat, immediately regret it",
+        "intensity": 0.6,
+        "axes": {
+          "victim_victimless": -0.4,
+          "calculated_spontaneous": 0.6,
+          "upward_downward": 0.6
+        }
+      },
+      {
+        "label": "I sometimes shove them harder than needed",
+        "intensity": 0.85,
+        "axes": {
+          "victim_victimless": -0.6,
+          "self_other": 0.5,
+          "calculated_spontaneous": 0.7,
+          "upward_downward": 0.8
+        }
+      },
+      {
+        "label": "I've hit or kicked an animal in frustration",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -0.8,
+          "self_other": 0.7,
+          "upward_downward": 1,
+          "private_performative": -0.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.violence-child-discipline",
+    "prompt": "If you've raised or helped raise children — where do you land on physical discipline?",
+    "format": "scenario",
+    "severity": { "nl": 30 },
+    "citation": { "nl": { "statute": "BW 1:247 · Sr art. 300" } },
+    "tags": ["violence"],
+    "answers": [
+      {
+        "label": "Never physical, ever",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.5 }
+      },
+      {
+        "label": "A firm hold to stop danger, no more",
+        "intensity": 0.2,
+        "axes": { "principled_pragmatic": -0.3, "calculated_spontaneous": -0.5 }
+      },
+      {
+        "label": "A light smack occasionally in the early years",
+        "intensity": 0.6,
+        "axes": {
+          "victim_victimless": -0.5,
+          "self_other": 0.5,
+          "upward_downward": 0.7
+        }
+      },
+      {
+        "label": "Regular smacking was part of the household",
+        "intensity": 0.9,
+        "axes": {
+          "victim_victimless": -0.8,
+          "self_other": 0.8,
+          "upward_downward": 1,
+          "private_performative": -0.7
+        }
+      },
+      {
+        "label": "Physical discipline was how we ran things",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -1,
+          "self_other": 1,
+          "upward_downward": 1,
+          "private_performative": -0.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.violence-history-initiate",
+    "prompt": "How many times in your life have you been the one to start a physical fight?",
+    "format": "likert",
+    "severity": { "nl": 28 },
+    "axes": {
+      "victim_victimless": -0.8,
+      "self_other": 0.8,
+      "rebel_conformist": -0.4,
+      "calculated_spontaneous": 0.5,
+      "active_omissive": -1
+    },
+    "citation": { "nl": { "statute": "Sr art. 300" } },
+    "tags": ["violence"]
+  },
+  {
+    "id": "nl.sex-consent",
+    "prompt": "Think about intimate situations where the other person's enthusiasm felt uncertain. Where do you usually land?",
+    "format": "scenario",
+    "severity": { "nl": 60 },
+    "citation": {
+      "nl": { "statute": "Sr art. 239-246 (Wet seksuele misdrijven 2024)" }
+    },
+    "tags": ["sex", "severe"],
+    "answers": [
+      {
+        "label": "Full stop, ask, and don't restart without clear yes",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -1, "realist_absolutist": 0.5 }
+      },
+      {
+        "label": "Pause, check in verbally",
+        "intensity": 0.1,
+        "axes": { "principled_pragmatic": -0.7 }
+      },
+      {
+        "label": "Read body language, keep going if it seems fine",
+        "intensity": 0.5,
+        "axes": {
+          "principled_pragmatic": 0.4,
+          "self_other": 0.4,
+          "calculated_spontaneous": 0.3
+        }
+      },
+      {
+        "label": "Keep going unless they clearly say no",
+        "intensity": 0.8,
+        "axes": {
+          "principled_pragmatic": 0.7,
+          "victim_victimless": -0.7,
+          "self_other": 0.8,
+          "active_omissive": -0.7
+        }
+      },
+      {
+        "label": "Have pushed past hesitation more than once",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -1,
+          "self_other": 1,
+          "calculated_spontaneous": 0.3,
+          "private_performative": -0.7
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.sex-pressure",
+    "prompt": "Someone you're interested in says they're not interested. Over the following weeks — where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 35 },
+    "citation": {
+      "nl": { "statute": "Sr art. 246 (aanranding) · art. 285b (stalking)" }
+    },
+    "tags": ["sex"],
+    "answers": [
+      {
+        "label": "Accept it and move on",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.5 }
+      },
+      {
+        "label": "One more attempt later, then drop it",
+        "intensity": 0.3,
+        "axes": { "calculated_spontaneous": -0.3 }
+      },
+      {
+        "label": "Keep reaching out periodically",
+        "intensity": 0.6,
+        "axes": {
+          "victim_victimless": -0.4,
+          "self_other": 0.5,
+          "calculated_spontaneous": -0.3
+        }
+      },
+      {
+        "label": "Try harder — treat silence as 'maybe'",
+        "intensity": 0.9,
+        "axes": {
+          "victim_victimless": -0.8,
+          "self_other": 0.8,
+          "calculated_spontaneous": -0.4,
+          "upward_downward": 0.5
+        }
+      },
+      {
+        "label": "I've kept going past clear 'nos' before",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -1,
+          "self_other": 1,
+          "calculated_spontaneous": 0.3,
+          "private_performative": -0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.sex-work",
+    "prompt": "How often have you paid for or sold sexual services?",
+    "format": "likert",
+    "severity": { "nl": 4 },
+    "axes": {
+      "victim_victimless": 0.3,
+      "self_other": -0.3,
+      "private_performative": -0.7,
+      "realist_absolutist": -0.7
+    },
+    "citation": {
+      "nl": {
+        "statute": "Wetboek van Strafrecht art. 273f (illegale vormen) · overige legaal in NL"
+      }
+    },
+    "tags": ["sex", "NL-specific"]
+  },
+  {
+    "id": "nl.intimate-images",
+    "prompt": "Someone you've been with sent you a private image. The relationship ends badly. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 55 },
+    "citation": { "nl": { "statute": "Sr art. 139h · wraakporno" } },
+    "tags": ["sex", "digital", "severe"],
+    "answers": [
+      {
+        "label": "Delete, never show anyone, ever",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.7, "realist_absolutist": 0.5 }
+      },
+      {
+        "label": "Keep for myself, never share",
+        "intensity": 0.2,
+        "axes": { "private_performative": -0.6 }
+      },
+      {
+        "label": "Showed one friend, regretted it",
+        "intensity": 0.5,
+        "axes": {
+          "victim_victimless": -0.6,
+          "self_other": 0.5,
+          "calculated_spontaneous": 0.4
+        }
+      },
+      {
+        "label": "Shown to more than one person privately",
+        "intensity": 0.85,
+        "axes": {
+          "victim_victimless": -0.8,
+          "self_other": 0.8,
+          "private_performative": -0.3
+        }
+      },
+      {
+        "label": "Posted or sent to a wider group",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -1,
+          "self_other": 1,
+          "private_performative": 0.8,
+          "active_omissive": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.sex-age-gap",
+    "prompt": "How comfortable are you with large age gaps in relationships where the younger partner is under 21?",
+    "format": "scenario",
+    "severity": { "nl": 15 },
+    "citation": { "nl": { "statute": "Sr art. 245 · art. 247-249" } },
+    "tags": ["sex"],
+    "answers": [
+      {
+        "label": "Uncomfortable and wouldn't pursue",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.7, "realist_absolutist": 0.5 }
+      },
+      {
+        "label": "Fine if they're legal age and clearly consenting",
+        "intensity": 0.4,
+        "axes": { "principled_pragmatic": 0.3, "realist_absolutist": -0.3 }
+      },
+      {
+        "label": "Pursued it myself, older side",
+        "intensity": 0.7,
+        "axes": {
+          "principled_pragmatic": 0.5,
+          "upward_downward": 0.5,
+          "private_performative": -0.3
+        }
+      },
+      {
+        "label": "Have pursued even below legal age",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -1,
+          "self_other": 1,
+          "upward_downward": 1,
+          "active_omissive": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.wallet-scenario",
+    "prompt": "You see someone drop a wallet with €400 in it. They've walked off, didn't notice. What do you do?",
+    "format": "scenario",
+    "severity": { "nl": 10 },
+    "citation": {
+      "nl": { "statute": "Sr art. 310 (diefstal) · art. 321 (verduistering)" }
+    },
+    "tags": ["property"],
+    "answers": [
+      {
+        "label": "Run after them, return it",
+        "intensity": 0,
+        "axes": {
+          "principled_pragmatic": -0.9,
+          "active_omissive": -1,
+          "self_other": -0.5
+        }
+      },
+      {
+        "label": "Take it to police",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.6, "realist_absolutist": 0.6 }
+      },
+      {
+        "label": "Leave it, someone else will deal with it",
+        "intensity": 0.4,
+        "axes": { "active_omissive": 0.7, "private_performative": -0.5 }
+      },
+      {
+        "label": "Keep it, quietly",
+        "intensity": 0.8,
+        "axes": {
+          "principled_pragmatic": 0.7,
+          "ideological_opportunistic": 0.9,
+          "private_performative": -0.8,
+          "self_other": 0.7
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.shoplift-small",
+    "prompt": "At a self-checkout, the scanner misses an item. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 8 },
+    "citation": { "nl": { "statute": "Sr art. 310" } },
+    "tags": ["property"],
+    "answers": [
+      {
+        "label": "Stop the machine, call staff",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.6, "realist_absolutist": 0.6 }
+      },
+      {
+        "label": "Rescan the item and pay",
+        "intensity": 0.1,
+        "axes": { "principled_pragmatic": -0.4 }
+      },
+      {
+        "label": "Realise it, let it go — not my problem",
+        "intensity": 0.6,
+        "axes": {
+          "victim_victimless": 0.3,
+          "ideological_opportunistic": 0.6,
+          "active_omissive": 0.6
+        }
+      },
+      {
+        "label": "Bag without rescanning, keep moving",
+        "intensity": 0.85,
+        "axes": {
+          "rebel_conformist": -0.3,
+          "ideological_opportunistic": 0.8,
+          "calculated_spontaneous": 0.3
+        }
+      },
+      {
+        "label": "I look for the glitch on purpose sometimes",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": 0.8,
+          "rebel_conformist": -0.5,
+          "ideological_opportunistic": 1,
+          "calculated_spontaneous": -0.7,
+          "private_performative": -0.6
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.employer-theft",
+    "prompt": "How often have you taken stuff, time, or resources from an employer that wasn't yours to take?",
+    "format": "likert",
+    "severity": { "nl": 12 },
+    "axes": {
+      "principled_pragmatic": 0.6,
+      "victim_victimless": 0.3,
+      "self_other": 0.4,
+      "ideological_opportunistic": 0.6,
+      "private_performative": -0.7,
+      "upward_downward": -0.3
+    },
+    "citation": { "nl": { "statute": "Sr art. 321 · art. 322" } },
+    "tags": ["property", "work"]
+  },
+  {
+    "id": "nl.vandalism",
+    "prompt": "How often have you damaged property that wasn't yours (graffiti, breaking things in anger, deliberate scratches)?",
+    "format": "likert",
+    "severity": { "nl": 15 },
+    "axes": {
+      "rebel_conformist": -0.5,
+      "victim_victimless": -0.3,
+      "self_other": 0.5,
+      "calculated_spontaneous": 0.7,
+      "private_performative": 0.2
+    },
+    "citation": { "nl": { "statute": "Sr art. 350" } },
+    "tags": ["property"]
+  },
+  {
+    "id": "nl.squat",
+    "prompt": "How comfortable would you be taking over an empty building for yourself or for others who need shelter?",
+    "format": "scenario",
+    "severity": { "nl": 12 },
+    "citation": {
+      "nl": {
+        "statute": "Sr art. 138-138a (huisvredebreuk · kraken verboden sinds 2010)"
+      }
+    },
+    "tags": ["property", "protest", "NL-specific"],
+    "answers": [
+      {
+        "label": "Never — property rights matter",
+        "intensity": 0,
+        "axes": { "rebel_conformist": 0.7, "realist_absolutist": 0.8 }
+      },
+      {
+        "label": "Only in a genuine emergency",
+        "intensity": 0.3,
+        "axes": { "principled_pragmatic": -0.3, "calculated_spontaneous": 0.3 }
+      },
+      {
+        "label": "If it's sat empty long enough — yes",
+        "intensity": 0.7,
+        "axes": {
+          "principled_pragmatic": -0.5,
+          "rebel_conformist": -0.8,
+          "ideological_opportunistic": -0.5,
+          "upward_downward": -0.7
+        }
+      },
+      {
+        "label": "Have done it",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": -0.6,
+          "rebel_conformist": -1,
+          "ideological_opportunistic": -0.7,
+          "active_omissive": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.borrowed-kept",
+    "prompt": "How often do you keep borrowed items — books, tools, cables — you know you should return?",
+    "format": "likert",
+    "severity": { "nl": 2 },
+    "axes": {
+      "victim_victimless": 0.3,
+      "calculated_spontaneous": 0.4,
+      "ideological_opportunistic": 0.5,
+      "private_performative": -0.5
+    },
+    "citation": { "nl": { "statute": "civiel · bruikleen" } },
+    "tags": ["property", "everyday"]
+  },
+  {
+    "id": "nl.knowingly-stolen",
+    "prompt": "How often do you buy something second-hand when the price or circumstance tells you it was probably stolen?",
+    "format": "likert",
+    "severity": { "nl": 15 },
+    "axes": {
+      "principled_pragmatic": 0.6,
+      "self_other": 0.2,
+      "calculated_spontaneous": 0.2,
+      "ideological_opportunistic": 0.7,
+      "private_performative": -0.6,
+      "realist_absolutist": -0.7
+    },
+    "citation": { "nl": { "statute": "Sr art. 416 · heling" } },
+    "tags": ["property"]
+  },
+  {
+    "id": "nl.lost-found",
+    "prompt": "How often do you pocket cash or objects you find in public (bench, café, parking lot)?",
+    "format": "likert",
+    "severity": { "nl": 5 },
+    "axes": {
+      "principled_pragmatic": 0.5,
+      "victim_victimless": 0.4,
+      "calculated_spontaneous": 0.4,
+      "ideological_opportunistic": 0.6,
+      "private_performative": -0.5
+    },
+    "citation": { "nl": { "statute": "Sr art. 321 · BW 5:5" } },
+    "tags": ["property", "everyday"]
+  },
+  {
+    "id": "nl.form-lies",
+    "prompt": "When filling official forms, the grey fields — living-together status, dates, small amounts — where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 18 },
+    "citation": { "nl": { "statute": "Sr art. 225 · valsheid in geschrifte" } },
+    "tags": ["speech", "fraud"],
+    "answers": [
+      {
+        "label": "Strict accuracy, err in favour of the authority",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.8, "realist_absolutist": 0.7 }
+      },
+      {
+        "label": "Read questions literally, answer literally",
+        "intensity": 0.2,
+        "axes": { "calculated_spontaneous": -0.4 }
+      },
+      {
+        "label": "Slight interpretation in my favour",
+        "intensity": 0.5,
+        "axes": {
+          "principled_pragmatic": 0.5,
+          "ideological_opportunistic": 0.4
+        }
+      },
+      {
+        "label": "Strategic phrasing when it saves me money",
+        "intensity": 0.8,
+        "axes": {
+          "principled_pragmatic": 0.8,
+          "calculated_spontaneous": -0.7,
+          "ideological_opportunistic": 0.8,
+          "private_performative": -0.6
+        }
+      },
+      {
+        "label": "Whatever makes the number work",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": 1,
+          "calculated_spontaneous": -0.8,
+          "ideological_opportunistic": 1,
+          "private_performative": -0.8,
+          "upward_downward": -0.3
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.oath-lies",
+    "prompt": "Police or gemeente official asks you something you'd rather not answer. Where do you land?",
+    "format": "scenario",
+    "severity": { "nl": 35 },
+    "citation": { "nl": { "statute": "Sr art. 207 · meineed" } },
+    "tags": ["speech"],
+    "answers": [
+      {
+        "label": "Full truth even if it costs me",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -1, "realist_absolutist": 0.7 }
+      },
+      {
+        "label": "Answer what's asked, volunteer nothing",
+        "intensity": 0.3,
+        "axes": { "principled_pragmatic": -0.3, "calculated_spontaneous": -0.5 }
+      },
+      {
+        "label": "Shade the truth to avoid trouble",
+        "intensity": 0.7,
+        "axes": {
+          "principled_pragmatic": 0.6,
+          "calculated_spontaneous": -0.4,
+          "private_performative": -0.6
+        }
+      },
+      {
+        "label": "Outright lie when it's necessary",
+        "intensity": 0.9,
+        "axes": {
+          "principled_pragmatic": 0.9,
+          "calculated_spontaneous": -0.6,
+          "ideological_opportunistic": 0.7
+        }
+      },
+      {
+        "label": "I've lied in formal interviews before",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": 1,
+          "calculated_spontaneous": -0.8,
+          "ideological_opportunistic": 0.8,
+          "private_performative": -0.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.defame-online",
+    "prompt": "How often do you post things about identifiable individuals online that you know are false or unfair?",
+    "format": "likert",
+    "severity": { "nl": 15 },
+    "axes": {
+      "victim_victimless": -0.6,
+      "self_other": 0.6,
+      "calculated_spontaneous": 0.3,
+      "private_performative": 0.8
+    },
+    "citation": {
+      "nl": { "statute": "Sr art. 261-262 (smaad/laster) · art. 266" }
+    },
+    "tags": ["speech", "digital"]
+  },
+  {
+    "id": "nl.hate-speech",
+    "prompt": "When discussing groups (religion, race, orientation, nationality), how close to the line do you go?",
+    "format": "scenario",
+    "severity": { "nl": 15 },
+    "citation": { "nl": { "statute": "Sr art. 137c-137g" } },
+    "tags": ["speech"],
+    "answers": [
+      {
+        "label": "I don't make group-based jokes at all",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.5, "realist_absolutist": 0.5 }
+      },
+      {
+        "label": "Jokes among friends, not in public",
+        "intensity": 0.3,
+        "axes": { "private_performative": -0.5, "calculated_spontaneous": -0.3 }
+      },
+      {
+        "label": "I'll say it in public if I believe it",
+        "intensity": 0.7,
+        "axes": {
+          "rebel_conformist": -0.5,
+          "ideological_opportunistic": -0.5,
+          "private_performative": 0.7
+        }
+      },
+      {
+        "label": "I go hard on groups I think deserve it",
+        "intensity": 1,
+        "axes": {
+          "victim_victimless": -0.6,
+          "self_other": 0.6,
+          "private_performative": 1,
+          "upward_downward": 0.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.gossip",
+    "prompt": "How often do you share personal details about people that they didn't authorise you to share?",
+    "format": "likert",
+    "severity": { "nl": 4 },
+    "axes": {
+      "victim_victimless": -0.4,
+      "self_other": 0.4,
+      "calculated_spontaneous": 0.4,
+      "private_performative": 0.6
+    },
+    "citation": { "nl": { "statute": "AVG · civiel" } },
+    "tags": ["speech"]
+  },
+  {
+    "id": "nl.partner-lies",
+    "prompt": "How often do you lie to a partner or close family about things they'd want to know?",
+    "format": "likert",
+    "severity": { "nl": 5 },
+    "axes": {
+      "principled_pragmatic": 0.6,
+      "self_other": 0.5,
+      "calculated_spontaneous": -0.3,
+      "ideological_opportunistic": 0.5,
+      "private_performative": -0.7
+    },
+    "citation": { "nl": { "statute": "non-criminal · relational" } },
+    "tags": ["speech", "interpersonal"]
+  },
+  {
+    "id": "nl.protest-show",
+    "prompt": "How often do you show up physically to protests for causes you care about?",
+    "format": "likert",
+    "severity": { "nl": 1 },
+    "axes": {
+      "principled_pragmatic": -0.5,
+      "rebel_conformist": -0.4,
+      "ideological_opportunistic": -0.7,
+      "private_performative": 0.6,
+      "active_omissive": -0.7
+    },
+    "citation": {
+      "nl": { "statute": "Grondwet art. 9 · Wet openbare manifestaties" }
+    },
+    "tags": ["protest"]
+  },
+  {
+    "id": "nl.protest-block",
+    "prompt": "How comfortable are you with blocking roads, bridges, or infrastructure for a cause?",
+    "format": "scenario",
+    "severity": { "nl": 12 },
+    "citation": {
+      "nl": { "statute": "Sr art. 162 · Wegenverkeerswet art. 5" }
+    },
+    "tags": ["protest"],
+    "answers": [
+      {
+        "label": "Not comfortable at all",
+        "intensity": 0,
+        "axes": { "rebel_conformist": 0.6, "realist_absolutist": 0.6 }
+      },
+      {
+        "label": "OK with supporting, not with being there",
+        "intensity": 0.3,
+        "axes": { "private_performative": -0.5, "active_omissive": 0.5 }
+      },
+      {
+        "label": "I've been part of one",
+        "intensity": 0.7,
+        "axes": {
+          "rebel_conformist": -0.7,
+          "ideological_opportunistic": -0.7,
+          "active_omissive": -0.7
+        }
+      },
+      {
+        "label": "I help organise them",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": -0.7,
+          "rebel_conformist": -1,
+          "ideological_opportunistic": -1,
+          "private_performative": 0.7,
+          "active_omissive": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.civil-disobedience",
+    "prompt": "How comfortable are you breaking a law you consider clearly unjust?",
+    "format": "scenario",
+    "severity": { "nl": 5 },
+    "citation": {
+      "nl": { "statute": "contextual · depends on the law broken" }
+    },
+    "tags": ["protest"],
+    "answers": [
+      {
+        "label": "Law is law — I work within it",
+        "intensity": 0,
+        "axes": { "rebel_conformist": 1, "realist_absolutist": 1 }
+      },
+      {
+        "label": "Comfortable in spirit, haven't done it",
+        "intensity": 0.3,
+        "axes": { "principled_pragmatic": -0.3, "active_omissive": 0.5 }
+      },
+      {
+        "label": "Have done it, small things",
+        "intensity": 0.7,
+        "axes": {
+          "principled_pragmatic": -0.7,
+          "rebel_conformist": -0.7,
+          "ideological_opportunistic": -0.7,
+          "active_omissive": -0.7
+        }
+      },
+      {
+        "label": "I've taken real risks for it",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": -1,
+          "rebel_conformist": -1,
+          "ideological_opportunistic": -1,
+          "active_omissive": -1
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.occupy-space",
+    "prompt": "How comfortable are you occupying a government or corporate space to make a point?",
+    "format": "likert",
+    "severity": { "nl": 10 },
+    "axes": {
+      "principled_pragmatic": -0.5,
+      "rebel_conformist": -0.8,
+      "ideological_opportunistic": -0.8,
+      "private_performative": 0.6,
+      "active_omissive": -0.7,
+      "upward_downward": -0.8
+    },
+    "citation": { "nl": { "statute": "Sr art. 138 · huisvredebreuk" } },
+    "tags": ["protest"]
+  },
+  {
+    "id": "nl.street-art-cause",
+    "prompt": "How often do you put up posters, stencils, or graffiti for causes in public without permission?",
+    "format": "likert",
+    "severity": { "nl": 4 },
+    "axes": {
+      "rebel_conformist": -0.5,
+      "victim_victimless": 0.3,
+      "ideological_opportunistic": -0.5,
+      "private_performative": 0.3
+    },
+    "citation": { "nl": { "statute": "Sr art. 350 · APV" } },
+    "tags": ["protest", "property"]
+  },
+  {
+    "id": "nl.witness-crime",
+    "prompt": "You witness a serious crime being committed on a stranger. What do you usually do?",
+    "format": "scenario",
+    "severity": { "nl": 5 },
+    "citation": {
+      "nl": { "statute": "Sr art. 450 (hulpverlening) · morele plicht" }
+    },
+    "tags": ["omission"],
+    "answers": [
+      {
+        "label": "Intervene if I safely can, always call police",
+        "intensity": 0,
+        "axes": { "principled_pragmatic": -0.9, "active_omissive": -1 }
+      },
+      {
+        "label": "Call police, stay at safe distance",
+        "intensity": 0.1,
+        "axes": { "principled_pragmatic": -0.5, "active_omissive": -0.5 }
+      },
+      {
+        "label": "Record, but don't call",
+        "intensity": 0.6,
+        "axes": {
+          "private_performative": 0.5,
+          "active_omissive": 0.5,
+          "calculated_spontaneous": -0.3
+        }
+      },
+      {
+        "label": "Move on, not my business",
+        "intensity": 0.9,
+        "axes": {
+          "principled_pragmatic": 0.6,
+          "active_omissive": 1,
+          "private_performative": -0.6
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.friend-crime",
+    "prompt": "A close friend confesses to something genuinely serious — violence, a major fraud, a sexual assault. What's your move?",
+    "format": "scenario",
+    "severity": { "nl": 8 },
+    "citation": {
+      "nl": { "statute": "Sr art. 136 (for specific crimes) · otherwise moral" }
+    },
+    "tags": ["omission"],
+    "answers": [
+      {
+        "label": "Push them to confess; would report if they don't",
+        "intensity": 0.1,
+        "axes": {
+          "principled_pragmatic": -1,
+          "active_omissive": -1,
+          "rebel_conformist": -0.3
+        }
+      },
+      {
+        "label": "Push them to confess, wouldn't report myself",
+        "intensity": 0.3,
+        "axes": {
+          "principled_pragmatic": -0.4,
+          "active_omissive": -0.3,
+          "private_performative": -0.5
+        }
+      },
+      {
+        "label": "Keep their secret, push them to get help",
+        "intensity": 0.6,
+        "axes": { "active_omissive": 0.7, "private_performative": -0.8 }
+      },
+      {
+        "label": "Not my problem to fix",
+        "intensity": 1,
+        "axes": {
+          "principled_pragmatic": 0.5,
+          "active_omissive": 1,
+          "self_other": 0.7
+        }
+      }
+    ]
+  },
+  {
+    "id": "nl.ignore-suffering",
+    "prompt": "You see someone clearly in trouble (distress, medical, homelessness crisis). How often do you actually engage?",
+    "format": "likert",
+    "severity": { "nl": 2 },
+    "axes": {
+      "principled_pragmatic": 0.4,
+      "victim_victimless": -0.3,
+      "active_omissive": 0.8,
+      "private_performative": -0.6
+    },
+    "citation": { "nl": { "statute": "non-criminal · moral" } },
+    "tags": ["omission"]
+  },
+  {
+    "id": "nl.climate-silence",
+    "prompt": "When your employer, industry, or government is clearly doing climate harm, how loud are you about it?",
+    "format": "scenario",
+    "severity": { "nl": 1 },
+    "citation": { "nl": { "statute": "non-criminal · moral/civic" } },
+    "tags": ["omission", "protest"],
+    "answers": [
+      {
+        "label": "Louder than most — I organise around it",
+        "intensity": 0,
+        "axes": {
+          "principled_pragmatic": -1,
+          "rebel_conformist": -0.5,
+          "ideological_opportunistic": -1,
+          "active_omissive": -1,
+          "private_performative": 0.6
+        }
+      },
+      {
+        "label": "Vocal publicly, but don't organise",
+        "intensity": 0.3,
+        "axes": { "principled_pragmatic": -0.5, "private_performative": 0.5 }
+      },
+      {
+        "label": "Gripe privately, not publicly",
+        "intensity": 0.6,
+        "axes": { "private_performative": -0.6, "active_omissive": 0.5 }
+      },
+      {
+        "label": "Don't engage — not my fight",
+        "intensity": 0.9,
+        "axes": { "active_omissive": 1, "realist_absolutist": -0.3 }
+      }
+    ]
+  }
+]

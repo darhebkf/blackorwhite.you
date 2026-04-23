@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { type Figure, nearestMixed } from "@/lib/figures";
 import type { QuizResult } from "@/lib/scoring";
 import { AXES } from "@/lib/scoring";
 
@@ -6,13 +7,21 @@ type ResultCardProps = {
   result: QuizResult;
   actions: ReactNode;
   section: string;
+  figures: readonly Figure[];
+  jurisdictionAdjective: string;
   originLabel?: string;
 };
+
+const SWIPE_LINK = "group relative inline-block pb-[1px] no-underline";
+const SWIPE_UNDERLINE =
+  "pointer-events-none absolute left-0 bottom-0 h-px w-full bg-current transition-all duration-300 group-hover:w-0 group-focus-visible:w-0";
 
 export function ResultCard({
   result,
   actions,
   section,
+  figures,
+  jurisdictionAdjective,
   originLabel,
 }: ResultCardProps) {
   const { shade, axes, band, archetype, colorCodes } = result;
@@ -21,6 +30,7 @@ export function ResultCard({
       ? `${result.answered} / ${result.total} answered`
       : undefined;
   const topRight = originLabel ?? countLabel;
+  const nearby = nearestMixed(figures, shade, 2, 2);
 
   return (
     <section className="flex flex-col">
@@ -50,6 +60,9 @@ export function ResultCard({
                 {band.name}
               </span>
             </div>
+            <p className="eyebrow mt-4" style={{ opacity: 0.65 }}>
+              Measured under {jurisdictionAdjective} law
+            </p>
           </div>
 
           <div className="flex flex-col gap-3 max-w-[52ch]">
@@ -66,6 +79,72 @@ export function ResultCard({
               {archetype.blurb}
             </p>
           </div>
+
+          {nearby.length > 0 && (
+            <div className="flex flex-col gap-3 max-w-[60ch]">
+              <span className="eyebrow" style={{ opacity: 0.7 }}>
+                Near your shade
+              </span>
+              <ul className="flex flex-col">
+                {nearby.map((figure) => (
+                  <li
+                    key={figure.id}
+                    className="grid grid-cols-[3rem_1fr] gap-x-5 py-4 hairline-top"
+                  >
+                    <span
+                      className="mono-nums font-black"
+                      style={{
+                        fontSize: "var(--step-2)",
+                        lineHeight: 1,
+                      }}
+                    >
+                      {String(figure.shade).padStart(2, "0")}
+                    </span>
+                    <div className="flex flex-col gap-1">
+                      <div className="flex items-baseline gap-3 flex-wrap">
+                        <span
+                          className="font-bold tracking-tight"
+                          style={{ fontSize: "var(--step-1)" }}
+                        >
+                          {figure.name}
+                        </span>
+                        <span className="eyebrow" style={{ opacity: 0.55 }}>
+                          {figure.kind}
+                          {figure.work ? ` · ${figure.work}` : ""}
+                        </span>
+                      </div>
+                      <p
+                        className="italic-accent"
+                        style={{
+                          fontSize: "var(--step-0)",
+                          lineHeight: 1.45,
+                        }}
+                      >
+                        {figure.rationale}
+                      </p>
+                      {figure.citation && (
+                        <p className="eyebrow mt-1" style={{ opacity: 0.7 }}>
+                          {figure.citationUrl ? (
+                            <a
+                              href={figure.citationUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={SWIPE_LINK}
+                            >
+                              ↗ {figure.citation}
+                              <span aria-hidden className={SWIPE_UNDERLINE} />
+                            </a>
+                          ) : (
+                            figure.citation
+                          )}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {actions}
         </div>
