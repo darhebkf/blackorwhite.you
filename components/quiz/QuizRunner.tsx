@@ -3,12 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { OwnerActions } from "@/components/result/OwnerActions";
 import { ResultCard } from "@/components/result/ResultCard";
-import {
-  clearShadeCookie,
-  reflectFromCookie,
-  reflectShade,
-  setShadeCookie,
-} from "@/lib/browser";
+import { reflectFromCookie, reflectShade, setShadeCookie } from "@/lib/browser";
 import type { Figure } from "@/lib/figures";
 import type { JurisdictionDescriptor } from "@/lib/jurisdictions";
 import { type Answer, computeShade, type Question, score } from "@/lib/scoring";
@@ -56,14 +51,14 @@ export function QuizRunner({
   );
 
   useEffect(() => {
-    reflectShade(runningShade);
-  }, [runningShade]);
-
-  useEffect(() => {
     return () => {
       void reflectFromCookie();
     };
   }, []);
+
+  useEffect(() => {
+    if (!done && answerList.length > 0) reflectShade(runningShade);
+  }, [runningShade, done, answerList.length]);
 
   const result = useMemo(
     () => (done ? score(questions, answerList, jurisdiction.id) : null),
@@ -71,7 +66,10 @@ export function QuizRunner({
   );
 
   useEffect(() => {
-    if (result) setShadeCookie(result.shade);
+    if (result) {
+      setShadeCookie(result.shade);
+      reflectShade(result.shade);
+    }
   }, [result]);
 
   const handleSelect = (optionIndex: number) => {
@@ -87,7 +85,6 @@ export function QuizRunner({
   };
 
   const handleRetake = () => {
-    clearShadeCookie();
     setState({ step: 0, answers: {} });
   };
 
