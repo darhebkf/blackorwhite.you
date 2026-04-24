@@ -342,50 +342,6 @@
     "tags": ["drugs"]
   },
   {
-    "id": "nl.drugs-sell",
-    "prompt": "A friend asks if you know where to get something. Where do you land?",
-    "format": "scenario",
-    "severity": { "nl": 45 },
-    "citation": { "nl": { "statute": "Opiumwet art. 2 lid B · art. 11" } },
-    "tags": ["drugs"],
-    "answers": [
-      {
-        "label": "I don't have access or wouldn't pass it along",
-        "intensity": 0,
-        "axes": { "principled_pragmatic": -0.6, "realist_absolutist": 0.4 }
-      },
-      {
-        "label": "Connect them to someone else, I don't handle",
-        "intensity": 0.25,
-        "axes": { "private_performative": -0.3, "active_omissive": 0.3 }
-      },
-      {
-        "label": "Share some of mine, no money changes hands",
-        "intensity": 0.5,
-        "axes": { "rebel_conformist": -0.3, "victim_victimless": 0.4 }
-      },
-      {
-        "label": "Sell at cost or small markup",
-        "intensity": 0.8,
-        "axes": {
-          "principled_pragmatic": 0.7,
-          "ideological_opportunistic": 0.7,
-          "calculated_spontaneous": -0.4
-        }
-      },
-      {
-        "label": "This is income for me",
-        "intensity": 1,
-        "axes": {
-          "principled_pragmatic": 0.9,
-          "ideological_opportunistic": 1,
-          "calculated_spontaneous": -0.7,
-          "self_other": 0.4
-        }
-      }
-    ]
-  },
-  {
     "id": "nl.drugs-work",
     "prompt": "How often do you use substances (recreational or harder) during work hours?",
     "format": "likert",
@@ -424,7 +380,7 @@
     "tags": ["drugs", "severe"],
     "answers": [
       {
-        "label": "Never — six months and they can buy it themselves",
+        "label": "Never",
         "intensity": 0,
         "axes": { "principled_pragmatic": -0.6, "realist_absolutist": 0.7 }
       },
@@ -505,7 +461,7 @@
     "tags": ["tax", "fraud"],
     "answers": [
       {
-        "label": "Report all of it, to the euro",
+        "label": "Report all of it, down to the cent",
         "intensity": 0,
         "axes": { "principled_pragmatic": -0.8, "realist_absolutist": 0.7 }
       },
@@ -553,12 +509,12 @@
     "tags": ["tax", "fraud"],
     "answers": [
       {
-        "label": "Never — if I didn't qualify, I didn't claim",
+        "label": "Never",
         "intensity": 0,
         "axes": { "principled_pragmatic": -0.9, "realist_absolutist": 0.7 }
       },
       {
-        "label": "Stretched the definition once, in a tight spot",
+        "label": "Once",
         "intensity": 0.4,
         "axes": {
           "principled_pragmatic": 0.3,
@@ -566,7 +522,7 @@
         }
       },
       {
-        "label": "More than once — I know how to phrase things",
+        "label": "More than once",
         "intensity": 0.8,
         "axes": {
           "principled_pragmatic": 0.9,
@@ -576,7 +532,7 @@
         }
       },
       {
-        "label": "Routinely — it's money on the table",
+        "label": "Routinely",
         "intensity": 1,
         "axes": {
           "principled_pragmatic": 1,
