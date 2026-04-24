@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { generateFaviconBlob } from "@/lib/browser";
 import type { QuizResult } from "@/lib/scoring";
-import { encodeResult } from "@/lib/share";
+import { buildShareMessage, encodeResult } from "@/lib/share";
 
 type OwnerActionsProps = {
   result: QuizResult;
@@ -30,11 +30,12 @@ export function OwnerActions({ result, onRetake }: OwnerActionsProps) {
   const share = async (): Promise<void> => {
     const slug = encodeResult(result);
     const url = `${window.location.origin}/r/${slug}`;
+    const message = buildShareMessage(result, url, "first-person");
     if (typeof navigator !== "undefined" && navigator.share) {
       try {
         await navigator.share({
-          title: `Shade ${String(result.shade).padStart(2, "0")} · ${result.archetype.name}`,
-          text: `I landed on ${result.archetype.name} (${result.band.name}).`,
+          title: message.title,
+          text: message.text,
           url,
         });
         return;
@@ -42,7 +43,7 @@ export function OwnerActions({ result, onRetake }: OwnerActionsProps) {
         // user canceled — fall through to clipboard
       }
     }
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(message.clipboard);
     setCopied(true);
     window.setTimeout(() => setCopied(false), 2000);
   };

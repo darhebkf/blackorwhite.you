@@ -44,7 +44,7 @@ export default async function SharedResultPage({
         figures={FIGURES}
         jurisdictionAdjective={jurisdictionDescriptor.adjective}
         originLabel="Not yours · take one"
-        actions={<SharedActions />}
+        actions={<SharedActions result={result} />}
       />
       <SiteFooter mark="§ R · Shared" />
     </main>

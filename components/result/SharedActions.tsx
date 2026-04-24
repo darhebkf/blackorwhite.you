@@ -2,22 +2,33 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import type { QuizResult } from "@/lib/scoring";
+import { buildShareMessage } from "@/lib/share";
 
-export function SharedActions() {
+type SharedActionsProps = {
+  result: Pick<QuizResult, "shade" | "archetype" | "band">;
+};
+
+export function SharedActions({ result }: SharedActionsProps) {
   const [copied, setCopied] = useState(false);
 
   const reshare = async (): Promise<void> => {
     if (typeof window === "undefined") return;
     const url = window.location.href;
+    const message = buildShareMessage(result, url, "third-person");
     if (typeof navigator !== "undefined" && navigator.share) {
       try {
-        await navigator.share({ url });
+        await navigator.share({
+          title: message.title,
+          text: message.text,
+          url,
+        });
         return;
       } catch {
         // fall through to clipboard
       }
     }
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(message.clipboard);
     setCopied(true);
     window.setTimeout(() => setCopied(false), 2000);
   };
