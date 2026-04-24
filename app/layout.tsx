@@ -46,6 +46,7 @@ async function readShadeServer(): Promise<number> {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL as string),
   title: "BLACK or WHITE — how gray are you.",
   description:
     "Everyone operates in the gray area. Tax workarounds, weed, speeding, white lies, civil disobedience, piracy — all of it. Twenty-four questions from criminal law and international treaties measure exactly how much of the gray you live in, and hand you back a shade, a color code, and a place on the spectrum. Nothing leaves your device.",
